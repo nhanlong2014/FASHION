@@ -20,7 +20,7 @@
             android:id="@+id/toolbartext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Search"
+            android:hint="Tìm kiếm"
             android:drawablePadding="10dp"
             android:drawableLeft="@drawable/ic_search"
             android:imeOptions="actionSearch"
