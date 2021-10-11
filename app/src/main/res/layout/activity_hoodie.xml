@@ -21,7 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Search"
-            android:textColorHint="@color/colorPrimary"
             android:drawablePadding="10dp"
             android:drawableLeft="@drawable/ic_search"
             android:imeOptions="actionSearch"
@@ -42,7 +41,7 @@
             android:layout_marginLeft="6dp"
             android:fontFamily="@font/roboto_regular"
             android:text="HOODIES"
-            android:textColor="@color/colorPrimary"
+            android:textColor="#012835"
             android:textSize="24dp" />
 
         <TextView
@@ -55,7 +54,7 @@
             android:drawablePadding="4dp"
             android:fontFamily="@font/roboto_regular"
             android:text="Xem tất cả"
-            android:textColor="@color/colorPrimary"
+            android:textColor="#012835"
             android:textSize="16dp" />
 
     </RelativeLayout>
