@@ -24,13 +24,13 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
     View view = inflater.inflate(R.layout.fragment_profile2, container, false);
     textView = view.findViewById(R.id.textView);
-    textView.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(getActivity(), DangNhapActivity.class);
-            startActivityForResult(intent, SECOND_ACTIVITY_REQUEST_CODE);
-        }
-    });
+//    textView.setOnClickListener(new View.OnClickListener() {
+//        @Override
+//        public void onClick(View v) {
+//            Intent intent = new Intent(getActivity(), DangNhapActivity.class);
+//            startActivityForResult(intent, SECOND_ACTIVITY_REQUEST_CODE);
+//        }
+//    });
     return view;
     }
 //    @Override

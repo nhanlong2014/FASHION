@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.FASHION" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -27,10 +27,13 @@
         <item name="android:textSize">22sp</item>
         <item name="android:fontFamily">@font/roboto_regular</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:listDivider">@color/colorPrimary</item>
+
+
     </style>
 
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <!-- Customize color of navigation drawer icon and back arrow -->
-        <item name="colorControlNormal">#012835</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
     </style>
 </resources>

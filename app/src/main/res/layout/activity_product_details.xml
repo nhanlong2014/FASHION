@@ -7,18 +7,34 @@
 
     tools:context=".activities.ProductDetailsActivity">
 
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:theme="@style/ToolbarTheme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/ToolbarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_scrollFlags="scroll|enterAlways|snap"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        >
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/ic_arrow_back"/>
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Chi tiết sản phẩm"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="20dp" />
+
     </androidx.appcompat.widget.Toolbar>
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,10 +54,11 @@
             app:sliderIndicatorAnimationDuration="200"
             app:sliderIndicatorGravity="center_horizontal|bottom"
             app:sliderIndicatorMargin="15dp"
+
             app:sliderIndicatorOrientation="horizontal"
             app:sliderIndicatorPadding="3dp"
             app:sliderIndicatorRadius="2dp"
-            app:sliderIndicatorSelectedColor="#012835"
+            app:sliderIndicatorSelectedColor="@color/colorPrimary"
             app:sliderIndicatorUnselectedColor="#FFF"
             app:sliderScrollTimeInSec="2"
             app:sliderStartAutoCycle="true" />
@@ -52,14 +69,15 @@
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/roboto_regular"
             android:text="Vans Old School Black White"
-            android:textColor="#012835"
-            android:textSize="16dp" />
+            android:textColor="@color/black"
+            android:textSize="20dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
+            android:textColor="@color/black"
             android:fontFamily="@font/roboto_regular"
             android:text="đ 1.800.00"
             />
@@ -77,7 +95,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/roboto_regular"
                 android:text="Size"
-                android:textColor="#012835"
+                android:textColor="@color/colorPrimary"
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
@@ -153,7 +171,7 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/roboto_regular"
                     android:text="Detail"
-                    android:textColor="#012835"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="16dp"
                     android:textStyle="bold" />
 
@@ -183,7 +201,7 @@
                     android:background="@drawable/button_shape"
                     android:fontFamily="@font/roboto_regular"
                     android:text="Add to Card"
-                    android:textColor="#012835" />
+                    android:textColor="@color/colorPrimary"/>
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="100dp"
@@ -192,7 +210,7 @@
                     android:layout_marginTop="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/button_shape"
-                    android:backgroundTint="#012835"
+                    android:backgroundTint="@color/colorPrimary"
                     android:fontFamily="@font/roboto_regular"
                     android:text="Buy Now"
                     android:textColor="@color/white" />

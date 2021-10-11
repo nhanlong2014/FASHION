@@ -26,10 +26,10 @@ public class ProductDetailsActivity extends AppCompatActivity {
     AppCompatButton btnSize38;
     Boolean isClickedDummy = true; // in your onCreate()
     SliderView sliderView;
-    int[] images = {R.drawable.drew,
-            R.drawable.drew,
-            R.drawable.drew,
-            R.drawable.drew};
+    int[] images = {R.drawable.swe,
+            R.drawable.swe,
+            R.drawable.swe,
+            R.drawable.swe};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,10 +48,10 @@ public class ProductDetailsActivity extends AppCompatActivity {
             }
         });
 
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        toolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
 //        tvTenSP = findViewById(R.id.tvTenSP);
 //        Intent i = getIntent();
 //        String tenSP = i.getStringExtra("tenSp");

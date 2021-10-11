@@ -12,6 +12,7 @@
         android:theme="@style/ToolbarTheme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         app:layout_scrollFlags="scroll|enterAlways|snap"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         >
@@ -19,6 +20,7 @@
         <EditText
             android:id="@+id/toolbartext"
             android:layout_width="match_parent"
+            android:textColorHint="@color/colorPrimary"
             android:layout_height="50dp"
             android:hint="Search"
 
