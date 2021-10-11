@@ -1,0 +1,134 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lineCard"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:background="#EEF6F8"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgCart"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:foregroundGravity="center_horizontal"
+                    android:src="@drawable/drew" />
+
+                <TextView
+                    android:id="@+id/tvTenCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_toRightOf="@id/imgCart"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Vans Old School"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvGiaTienCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTenCart"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@id/imgCart"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="đ 1.800.000" />
+
+                <TextView
+                    android:id="@+id/tvCartSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvGiaTienCart"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@id/imgCart"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Size: S" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCartSize"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/imgCart"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btntru"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/size_shape"
+                        android:backgroundTint="#EEF6F8"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textSize="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvsoluong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="1"
+                        android:textSize="20dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btncong"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/size_shape"
+                        android:backgroundTint="#EEF6F8"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textSize="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:padding="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/lineCard"
+            android:text="đ 180.000.000" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

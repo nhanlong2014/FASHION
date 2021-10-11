@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.DiaChiActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:theme="@style/ToolbarTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_arrow_back"/>
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:drawablePadding="10dp"
+            android:textColor="#012835"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Thanh Toán"/>
+
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/toolbar"
+        android:text="Thanh toán bằng ví Momo"
+        android:layout_marginLeft="22dp"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="16dp"
+        android:textColor="#012835"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_marginLeft="22dp"
+        android:background="@drawable/button_shape"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp">
+        <CheckBox
+            android:id="@+id/checkboxMomo"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"/>
+        <ImageView
+            android:layout_toRightOf="@+id/checkboxMomo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/momo" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/toolbar"
+        android:text="Nhận hàng khi thanh toán"
+        android:layout_marginLeft="22dp"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="16dp"
+        android:textColor="#012835"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_marginLeft="22dp"
+        android:background="@drawable/button_shape"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp">
+        <CheckBox
+            android:id="@+id/checkboxShip"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"/>
+        <ImageView
+            android:layout_toRightOf="@+id/checkboxShip"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/shipper"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnThanhToanNgay"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="30dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="#012835"
+            android:elevation="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:foregroundGravity="center_vertical"
+            android:text="Thanh toán ngay"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</LinearLayout>

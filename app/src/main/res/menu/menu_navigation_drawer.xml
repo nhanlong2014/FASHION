@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_newarivals"
+            android:title="NEW ARIVALS" />
+        <item
+            android:id="@+id/nav_tops"
+            android:title="TOPS" />
+        <item
+            android:id="@+id/nav_outerwear"
+            android:title="OUTERWEAR" />
+        <item
+            android:id="@+id/nav_hoodies"
+            android:title="HOODIES" />
+
+
+<!--        <item-->
+<!--            android:id="@+id/nav_help"-->
+<!--            android:title="Help" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/nav_share"-->
+<!--            android:title="Share" />-->
+
+<!--        <item-->
+<!--            android:id="@+id/nav_Contact"-->
+<!--            android:title="Contact" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_Condition"-->
+<!--            android:title="Terms and Conditions" />-->
+
+    </group>
+</menu>
