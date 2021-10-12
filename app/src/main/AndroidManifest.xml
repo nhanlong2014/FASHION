@@ -10,7 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FASHION">
         <activity
-            android:name=".activities.DangNhapActivity"
+            android:name=".activities.authencation.DoiMatKhauActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.authencation.QuenMatKhauActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.authencation.DangKyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.authencation.DangNhapActivity"
             android:exported="true" />
         <activity
             android:name=".activities.OrderThanhCongActivity"

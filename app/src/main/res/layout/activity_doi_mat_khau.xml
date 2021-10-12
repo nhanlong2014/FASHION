@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/brg"
+    tools:context=".activities.authencation.DoiMatKhauActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change Password"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Your new password must be different from previously used passwords"
+        android:gravity="center_horizontal"
+        android:textSize="12sp"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/edtCurrentPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawableTint="@color/colorPrimary"
+        android:elevation="4dp"
+        android:textSize="13sp"
+        android:inputType="textPersonName"
+        android:hint="Current password"
+        style="@style/editTextDrawableTheme"/>
+
+    <EditText
+        android:id="@+id/edtNewPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawableTint="@color/colorPrimary"
+        android:elevation="4dp"
+        android:textSize="13sp"
+        android:inputType="textPersonName"
+        android:hint="New password"
+        style="@style/editTextDrawableTheme"/>
+
+    <EditText
+        android:id="@+id/edtConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawableTint="@color/colorPrimary"
+        android:elevation="4dp"
+        android:textSize="13sp"
+        android:inputType="textPersonName"
+        android:hint="Confirm password"
+        style="@style/editTextDrawableTheme"/>
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_bg"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="Submit"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:backgroundTint="@null" />
+</LinearLayout>

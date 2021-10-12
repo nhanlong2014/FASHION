@@ -8,26 +8,26 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="@drawable/brg"
-    tools:context=".activities.authencation.DangNhapActivity">
+    tools:context=".activities.authencation.DangKyActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign In"
-        android:textSize="40sp"
+        android:text="Create account"
+        android:textSize="30sp"
         android:textColor="@color/black"
         android:textStyle="bold"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Please sign in to continue"
-        android:textSize="12sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"/>
+    <!--    <TextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Please Login to continue"-->
+    <!--        android:textSize="12sp"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:textStyle="bold"/>-->
 
     <EditText
-        android:id="@+id/edtEmail"
+        android:id="@+id/edtFullName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -35,9 +35,23 @@
         android:drawableTint="@color/colorPrimary"
         android:elevation="4dp"
         android:textSize="13sp"
-        android:hint="Email or phone number"
+        android:inputType="textPersonName"
+        android:hint="Full name"
+
         style="@style/editTextDrawableTheme"/>
 
+    <EditText
+        android:id="@+id/edtEmail"
+        style="@style/editTextDrawableTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:drawableLeft="@drawable/ic_baseline_mail_24"
+        android:drawableTint="@color/colorPrimary"
+        android:elevation="4dp"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:textSize="13sp" />
 
     <EditText
         android:id="@+id/edtPassword"
@@ -52,18 +66,35 @@
         android:inputType="textPassword"
         android:textSize="13sp" />
 
-    <TextView
-        android:id="@+id/txt_ForgotPassword"
+
+    <EditText
+        android:id="@+id/edtPhoneNumber"
+        style="@style/editTextDrawableTheme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Forgot password?"
-        android:textSize="12sp"
-        android:textColor="@color/black"
-        android:gravity="end"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="19dp"
+        android:drawableLeft="@drawable/ic_baseline_phone_24"
+        android:drawableTint="@color/colorPrimary"
+        android:elevation="4dp"
+        android:hint="Phone number"
+        android:inputType="number"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/edtAddress"
+        style="@style/editTextDrawableTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:drawableLeft="@drawable/ic_baseline_location_on_24"
+        android:drawableTint="@color/colorPrimary"
+        android:elevation="4dp"
+        android:hint="Address"
+        android:inputType="textPersonName"
+        android:textSize="13sp" />
 
     <Button
-        android:id="@+id/btnSignIn"
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
@@ -71,34 +102,19 @@
         android:background="@drawable/button_bg"
         android:paddingLeft="4dp"
         android:paddingRight="4dp"
-        android:text="Sign In"
+        android:text="Sign Up"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         app:backgroundTint="@null" />
 
-    <RelativeLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:gravity="center_horizontal">
-
-        <TextView
-            android:id="@+id/txt_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Don't have an account?"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
-
-        <TextView
-            android:id="@+id/txt_signUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/txt_1"
-            android:text="  Sign Up"
-            android:textColor="#FF007AFE"
-            android:textSize="12sp" />
-    </RelativeLayout>
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="Or sign in with"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -110,13 +126,13 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginRight="10dp"
             android:src="@drawable/google" />
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="10dp"
             android:src="@drawable/facebook"/>
     </LinearLayout>
 

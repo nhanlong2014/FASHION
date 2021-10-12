@@ -1,7 +1,5 @@
 package com.example.fashion.fragment;
 
-import static android.app.Activity.RESULT_OK;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +10,7 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import com.example.fashion.R;
-import com.example.fashion.activities.DangNhapActivity;
+import com.example.fashion.activities.authencation.DangNhapActivity;
 
 
 public class ProfileFragment extends Fragment {
@@ -23,14 +21,15 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
     View view = inflater.inflate(R.layout.fragment_profile2, container, false);
-    textView = view.findViewById(R.id.textView);
-//    textView.setOnClickListener(new View.OnClickListener() {
-//        @Override
-//        public void onClick(View v) {
-//            Intent intent = new Intent(getActivity(), DangNhapActivity.class);
+    textView = view.findViewById(R.id.username);
+    textView.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getActivity(), DangNhapActivity.class);
 //            startActivityForResult(intent, SECOND_ACTIVITY_REQUEST_CODE);
-//        }
-//    });
+            startActivity(intent);
+        }
+    });
     return view;
     }
 //    @Override

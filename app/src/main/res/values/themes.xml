@@ -4,6 +4,7 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -32,8 +33,21 @@
 
     </style>
 
+
+    <!--toolbar -->
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <!-- Customize color of navigation drawer icon and back arrow -->
         <item name="colorControlNormal">@color/colorPrimary</item>
+    </style>
+
+    <!--edittext -->
+    <style name="editTextDrawableTheme" parent="@android:style/Widget.EditText">
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:background">@drawable/edit_text_bg</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:maxLines">1</item>
     </style>
 </resources>
