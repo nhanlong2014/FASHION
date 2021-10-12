@@ -17,7 +17,7 @@
         >
 
         <EditText
-            android:id="@+id/toolbartext"
+            android:id="@+id/edtSearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Search"
@@ -45,19 +45,6 @@
             android:textColor="@color/colorPrimary"
             android:textSize="24dp" />
 
-        <TextView
-            android:id="@+id/xemTatCa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:drawableRight="@drawable/ic_arrow_right"
-            android:drawablePadding="4dp"
-            android:fontFamily="@font/roboto_regular"
-            android:text="Xem tất cả"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16dp" />
-
     </RelativeLayout>
 
     <RelativeLayout
@@ -66,7 +53,7 @@
         android:layout_height="wrap_content">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcvSanPham"
+            android:id="@+id/rcvTops"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"

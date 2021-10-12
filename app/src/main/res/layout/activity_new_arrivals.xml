@@ -17,8 +17,8 @@
         >
 
         <EditText
-            android:id="@+id/toolbartext"
-            android:layout_width="match_parent"
+            android:id="@+id/edtSearch"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:hint="Search"
             android:drawablePadding="10dp"
@@ -26,6 +26,13 @@
             android:drawableLeft="@drawable/ic_search"
             android:imeOptions="actionSearch"
             android:background="@drawable/button_shape"/>
+
+        <ImageView
+            android:id="@+id/imgSort"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_sort2"/>
+
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -45,18 +52,6 @@
             android:textColor="@color/colorPrimary"
             android:textSize="24dp" />
 
-        <TextView
-            android:id="@+id/xemTatCa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:drawableRight="@drawable/ic_arrow_right"
-            android:drawablePadding="4dp"
-            android:fontFamily="@font/roboto_regular"
-            android:text="Xem tất cả"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16dp" />
 
     </RelativeLayout>
 

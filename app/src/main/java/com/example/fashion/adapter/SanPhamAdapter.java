@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,14 +19,15 @@ import com.example.fashion.R;
 import com.example.fashion.activities.ProductDetailsActivity;
 import com.example.fashion.model.Products;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHolder> {
     private Context Context;
     private List<Products> list;
 
-    public SanPhamAdapter(Context Context, List<Products> list) {
-        this.Context = Context;
+    public SanPhamAdapter(android.content.Context context, List<Products> list) {
+        Context = context;
         this.list = list;
     }
 
@@ -67,5 +69,10 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
             tvGiaTien = itemView.findViewById(R.id.tvGiaTien);
 //            tvMoTa = itemView.findViewById(R.id.card_nb_follower);
         }
+    }
+
+    public void getFilter(ArrayList<Products> filterList){
+            list = filterList;
+            notifyDataSetChanged();
     }
 }
