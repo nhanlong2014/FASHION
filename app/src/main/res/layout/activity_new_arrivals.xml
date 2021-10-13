@@ -9,51 +9,58 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:theme="@style/ToolbarTheme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/ToolbarTheme"
         app:layout_scrollFlags="scroll|enterAlways|snap"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        >
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
 
         <EditText
+
             android:id="@+id/edtSearch"
-            android:layout_width="360dp"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:hint="Search"
-            android:drawablePadding="10dp"
-            android:textColorHint="@color/colorPrimary"
+            android:background="@drawable/edit_text_bg"
             android:drawableLeft="@drawable/ic_search"
-            android:imeOptions="actionSearch"
-            android:background="@drawable/button_shape"/>
+            android:drawablePadding="10dp"
+            android:hint="Tìm kiếm sản phẩm"
+            android:textSize="14dp"
+            android:textColorHint="@color/colorPrimary"
+            />
 
-        <ImageView
-            android:id="@+id/imgSort"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_sort2"/>
-
+        <View
+            android:layout_width="2dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="40dp"
+            android:background="@color/colorPrimary"
+            />
 
     </androidx.appcompat.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
 
-    <RelativeLayout
-        android:id="@+id/tvArri"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="6dp"
-            android:fontFamily="@font/roboto_regular"
-            android:text="NEW ARRIVALS"
-            android:textColor="@color/colorPrimary"
-            android:textSize="24dp" />
+        android:background="#DBEBF6"
+        />
 
 
-    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:gravity="center_vertical"
+        android:textSize="20dp"
+        android:padding="8dp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/colorPrimary"
+        android:text="NEW ARRIVALS"/>
+
+
 
     <RelativeLayout
 

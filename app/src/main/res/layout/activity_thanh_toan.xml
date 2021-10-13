@@ -36,7 +36,7 @@
         android:layout_marginLeft="22dp"
         android:fontFamily="@font/roboto_regular"
         android:textSize="16dp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -68,7 +68,7 @@
         android:layout_marginLeft="22dp"
         android:fontFamily="@font/roboto_regular"
         android:textSize="16dp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

@@ -1,10 +1,13 @@
 package com.example.fashion.model;
 
+import java.util.Collections;
+import java.util.Comparator;
+
 public class Products {
     private String tenSanPham,moTa;
     private Double giaTien;
     private int soLuong;
-    private int maHinhAnh, maKichThuoc, maTheLoai;
+    private int maSanPham,maHinhAnh, maKichThuoc, maTheLoai;
 
     public String getTenSanPham() {
         return tenSanPham;
@@ -28,6 +31,22 @@ public class Products {
 
     public void setGiaTien(Double giaTien) {
         this.giaTien = giaTien;
+    }
+
+    public int getSoLuong() {
+        return soLuong;
+    }
+
+    public void setSoLuong(int soLuong) {
+        this.soLuong = soLuong;
+    }
+
+    public int getMaSanPham() {
+        return maSanPham;
+    }
+
+    public void setMaSanPham(int maSanPham) {
+        this.maSanPham = maSanPham;
     }
 
     public int getMaHinhAnh() {
@@ -54,13 +73,34 @@ public class Products {
         this.maTheLoai = maTheLoai;
     }
 
-    public Products(String tenSanPham, String moTa, Double giaTien, int soLuong, int maHinhAnh, int maKichThuoc, int maTheLoai) {
+    public Products(String tenSanPham, String moTa, Double giaTien, int soLuong, int maSanPham, int maHinhAnh, int maKichThuoc, int maTheLoai) {
         this.tenSanPham = tenSanPham;
         this.moTa = moTa;
         this.giaTien = giaTien;
         this.soLuong = soLuong;
+        this.maSanPham = maSanPham;
         this.maHinhAnh = maHinhAnh;
         this.maKichThuoc = maKichThuoc;
         this.maTheLoai = maTheLoai;
     }
+
+    public static Comparator<Products> productsAZComparator = new Comparator<Products>() {
+        @Override
+        public int compare(Products o1, Products o2) {
+            return o1.getTenSanPham().compareTo(o2.getTenSanPham());
+        }
+    };
+    public static Comparator<Products> productsPriceComparator = new Comparator<Products>() {
+        @Override
+        public int compare(Products c1, Products c2) {
+            return Double.compare(c1.getGiaTien(),c2.getGiaTien());
+        }
+    };
+
+//     Collections.sort(list, new Comparator<Products>() {
+//        @Override
+//        public int compare(Products c1, Products c2) {
+//            return Double.compare(c1.getGiaTien(), c2.getGiaTien());
+//        }
+//    });
 }

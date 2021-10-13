@@ -12,7 +12,7 @@
        android:layout_height="50dp"
        android:layout_alignParentTop="true"
        app:titleTextColor="@color/colorPrimary"
-       app:title="Giỏ hàng">
+       app:title="GIỎ HÀNG">
 
 
    </androidx.appcompat.widget.Toolbar>

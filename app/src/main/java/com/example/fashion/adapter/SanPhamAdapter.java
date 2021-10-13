@@ -42,6 +42,8 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
     public void onBindViewHolder(@NonNull SanPhamAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.tvTenSP.setText(list.get(position).getTenSanPham());
         Glide.with(Context).load(list.get(position).getMaHinhAnh()).into(holder.imgProduct);
+        holder.tvGiaTien.setText(list.get(position).getGiaTien()+"đ");
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
