@@ -18,12 +18,11 @@
    </androidx.appcompat.widget.Toolbar>
 
    <ScrollView
-       android:background="#FBFBFB"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_above="@+id/rlt"
        android:layout_below="@+id/toolbarCart"
-       >
+       android:background="#FBFBFB">
 
       <androidx.recyclerview.widget.RecyclerView
           android:id="@+id/rcv_giohang"

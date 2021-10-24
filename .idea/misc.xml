@@ -10,6 +10,7 @@
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/drawable/ic_arrow_back.xml" value="0.1685185185185185" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/drawable/ic_arrow_dark.xml" value="0.1685185185185185" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/drawable/ic_arrow_right.xml" value="0.1685185185185185" />
+        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.1638888888888889" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/drawable/ic_baseline_mail_24.xml" value="0.1638888888888889" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1638888888888889" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/drawable/ic_baseline_reorder_24.xml" value="0.1685185185185185" />
@@ -33,31 +34,37 @@
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_doi_mat_khau.xml" value="0.264" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_giohang.xml" value="0.17028985507246377" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_hoodie.xml" value="0.1" />
-        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_main.xml" value="0.136" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_new_arrivals.xml" value="0.176" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_order_thanh_cong.xml" value="0.1" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_outerwears.xml" value="0.17028985507246377" />
-        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_product_details.xml" value="0.2" />
+        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_product_details.xml" value="0.10400000000000001" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_quen_mat_khau.xml" value="0.23777173913043478" />
+        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_san_pham_yeu_thich.xml" value="0.1" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_thanh_toan.xml" value="0.1634963768115942" />
+        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_thong_bao.xml" value="0.176" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_tops.xml" value="0.17028985507246377" />
+        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/activity_welcome.xml" value="0.2" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/app_bar_app.xml" value="0.12158054711246201" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/app_bar_main.xml" value="0.2" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/content_app.xml" value="0.17889492753623187" />
+        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/dialog_diachi.xml" value="0.176" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/fragment_blank.xml" value="0.17889492753623187" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/fragment_favorite2.xml" value="0.11955420466058764" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/fragment_gallery.xml" value="0.17889492753623187" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/fragment_gio_hang.xml" value="0.2359375" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/fragment_giohang.xml" value="0.17028985507246377" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/fragment_hi.xml" value="0.17889492753623187" />
-        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/fragment_home2.xml" value="0.1721014492753623" />
+        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/fragment_home2.xml" value="0.136" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/fragment_hu.xml" value="0.12708333333333333" />
-        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/fragment_profile2.xml" value="0.176" />
+        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/fragment_profile2.xml" value="0.2" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/fragment_tim_kiem.xml" value="0.2" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/item_cart.xml" value="0.17028985507246377" />
-        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/item_giohang.xml" value="0.12158054711246201" />
+        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/item_giohang.xml" value="0.176" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/item_product.xml" value="0.17028985507246377" />
+        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/item_sanphamyeuthich.xml" value="0.176" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/item_slideimage.xml" value="0.17028985507246377" />
+        <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/item_thongbao.xml" value="0.16799999999999998" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/layout/nav_header_main.xml" value="0.12447916666666667" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/menu/activity_main_drawer.xml" value="0.24615384615384617" />
         <entry key="..\:/ProjectAndroid/FASHION/app/src/main/res/menu/menu_bottom.xml" value="0.25" />

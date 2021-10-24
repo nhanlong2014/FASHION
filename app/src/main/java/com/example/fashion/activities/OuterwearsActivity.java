@@ -73,15 +73,15 @@ public class OuterwearsActivity extends AppCompatActivity {
     private void setRecycelview(List<Products> list){
         rcv = findViewById(R.id.rcvOuterwears);
         list.add(new Products("Vaaans Old School","aaaaa",
-                2.3,1,1,R.drawable.drew,1,1));
+                2.3,1,1,R.drawable.drew,"S",1));
         list.add(new Products("Abbbns Old School","aaaaa",
-                1.800000,1,1,R.drawable.drew,1,2));
+                1.800000,1,1,R.drawable.drew,"M",2));
         list.add(new Products("Bcccns Old School","aaaaa",
-                4.800000,1,1,R.drawable.drew,1,3));
+                4.800000,1,1,R.drawable.drew,"S",3));
         list.add(new Products("Vddddns Old School","aaaaa",
-                1.600000,1,1,R.drawable.drew,1,4));
+                1.600000,1,1,R.drawable.drew,"M",4));
         list.add(new Products("Deeeens Old School","aaaaa",
-                1.300000,1,1,R.drawable.drew,1,5));
+                1.300000,1,1,R.drawable.drew,"S",5));
         rcv.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
         adapter = new SanPhamAdapter(getApplicationContext(), list);
         rcv.setAdapter(adapter);

@@ -4,168 +4,185 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
+    android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
     tools:context=".MainActivity">
 
 
-    <RelativeLayout
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:background="@drawable/shape_thongtin"
-        android:layout_marginTop="22dp"
-        android:elevation="10dp">
+    <!--        android:visibility="gone"-->
+    <LinearLayout
+        android:id="@+id/rlt1"
+        android:padding="25dp"
 
-        <ImageView
-            android:id="@+id/profile"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="18dp"
-            android:src="@drawable/ic_user"></ImageView>
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
             android:layout_marginTop="22dp"
+            android:background="@drawable/shape_thongtin"
+            android:elevation="10dp">
 
-            android:layout_toRightOf="@+id/profile"
-            android:fontFamily="@font/roboto_regular"
-            android:text="Michelle Smith"
-            android:textColor="@color/black"
-            android:textSize="16dp"></TextView>
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:src="@drawable/ic_user"></ImageView>
 
-        <TextView
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="22dp"
+
+                android:layout_toRightOf="@+id/profile"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Michelle Smith"
+                android:textColor="@color/black"
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/username"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/profile"
+                android:fontFamily="@font/roboto_regular"
+                android:text="0815000000"
+                android:textColor="@color/black"
+                android:textSize="14dp"></TextView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/username"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="8dp"
-            android:layout_toRightOf="@+id/profile"
-            android:fontFamily="@font/roboto_regular"
-            android:text="0815000000"
-            android:textColor="@color/black"
-            android:textSize="14dp"></TextView>
+            android:layout_marginTop="34dp">
 
+            <ImageView
+                android:id="@+id/icon_ar"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_donhang">
 
-    </RelativeLayout>
+            </ImageView>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/icon_ar"
+                android:text="Đơn hàng của tôi"
+                android:textColor="@color/black"
+                android:textSize="14dp"></TextView>
 
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_dark">
 
+            </ImageView>
+        </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="34dp">
+        <RelativeLayout
 
-        <ImageView
-            android:id="@+id/icon_ar"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/ic_donhang">
-
-        </ImageView>
-
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/icon_ar"
-            android:text="Đơn hàng của tôi"
-            android:textColor="@color/black"
-            android:textSize="14dp"></TextView>
+            android:layout_marginTop="34dp">
 
-        <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_arrow_dark">
+            <ImageView
+                android:id="@+id/icon_set"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_heart2"></ImageView>
 
-        </ImageView>
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/icon_set"
+                android:text="Sản phẩm yêu thích"
+                android:textColor="@color/black"
+                android:textSize="14dp"></TextView>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="34dp">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_dark">
 
-        <ImageView
-            android:id="@+id/icon_set"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/ic_heart2">
+            </ImageView>
+        </RelativeLayout>
 
-        </ImageView>
+        <RelativeLayout
 
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/icon_set"
-            android:text="Sản phẩm yêu thích"
-            android:textColor="@color/black"
-            android:textSize="14dp"></TextView>
+            android:layout_marginTop="34dp">
 
-        <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_arrow_dark">
+            <ImageView
+                android:id="@+id/icon_sh"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_location">
 
-        </ImageView>
-    </RelativeLayout>
+            </ImageView>
 
-    <RelativeLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/icon_sh"
+                android:text="Địa chỉ của tôi"
+                android:textColor="@color/black"
+                android:textSize="14dp"></TextView>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_dark">
+
+            </ImageView>
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDangXuat"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/colorPrimary"
+            android:elevation="20dp"
+            android:text="Đăng xuất"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear6"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="34dp">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/icon_sh"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/ic_location">
-
-        </ImageView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/icon_sh"
-            android:text="Địa chỉ của tôi"
-            android:textColor="@color/black"
-            android:textSize="14dp"></TextView>
-
-        <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_arrow_dark">
-
-        </ImageView>
-    </RelativeLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="match_parent"
-        android:elevation="20dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:layout_marginTop="20dp"
-        android:layout_height="40dp"
-        android:textColor="@color/white"
-        android:text="Đăng xuất"
-        android:background="@drawable/button_shape"/>
-
+        <include
+            android:id="@+id/included"
+            layout="@layout/activity_dang_nhap" />
+    </LinearLayout>
 
 
 </LinearLayout>

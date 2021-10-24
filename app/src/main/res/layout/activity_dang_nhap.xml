@@ -27,7 +27,7 @@
         android:textStyle="bold"/>
 
     <EditText
-        android:id="@+id/edtEmail"
+        android:id="@+id/edtLoginEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -35,12 +35,13 @@
         android:drawableTint="@color/colorPrimary"
         android:elevation="4dp"
         android:textSize="13sp"
+        android:inputType="textEmailAddress"
         android:hint="Email or phone number"
         style="@style/editTextDrawableTheme"/>
 
 
     <EditText
-        android:id="@+id/edtPassword"
+        android:id="@+id/edtLoginPassword"
         style="@style/editTextDrawableTheme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,6 +49,7 @@
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawableTint="@color/colorPrimary"
         android:elevation="4dp"
+        android:singleLine="true"
         android:hint="Password"
         android:inputType="textPassword"
         android:textSize="13sp" />
@@ -95,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/txt_1"
-            android:text="  Sign Up"
+            android:text="Sign Up"
             android:textColor="#FF007AFE"
             android:textSize="12sp" />
     </RelativeLayout>

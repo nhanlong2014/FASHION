@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -43,12 +44,25 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
         holder.tvTenSP.setText(list.get(position).getTenSanPham());
         Glide.with(Context).load(list.get(position).getMaHinhAnh()).into(holder.imgProduct);
         holder.tvGiaTien.setText(list.get(position).getGiaTien()+"đ");
-
+        holder.imgYeuThich.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Context, "Yêu thích", Toast.LENGTH_SHORT).show();
+            }
+        });
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Context, ProductDetailsActivity.class);
-//                i.putExtra("tenSp",list.get(position).getTenSanPham());
+                i.putExtra("tenSanPham",list.get(position).getTenSanPham());
+                i.putExtra("moTa",list.get(position).getMoTa());
+                i.putExtra("maHinhAnh",String.valueOf(list.get(position).getMaHinhAnh()));
+                i.putExtra("giaTien",String.valueOf(list.get(position).getGiaTien()));
+//                i.putExtra("soLuong",String.valueOf(list.get(position).getSoLuong()));
+//                i.putExtra("maSanPham",String.valueOf(list.get(position).getMaSanPham()));
+//                i.putExtra("maHinhAnh",String.valueOf(list.get(position).getMaHinhAnh()));
+//                i.putExtra("maTheLoai",String.valueOf(list.get(position).getMaTheLoai()));
+
                 Context.startActivity(i);
             }
         });
@@ -61,7 +75,7 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView imgProduct;
+        ImageView imgProduct,imgYeuThich;
         TextView tvTenSP, tvGiaTien, tvMoTa;
 
         public ViewHolder(@NonNull View itemView) {
@@ -69,6 +83,7 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
             imgProduct = itemView.findViewById(R.id.imgSanPham);
             tvTenSP = itemView.findViewById(R.id.tvTenSP);
             tvGiaTien = itemView.findViewById(R.id.tvGiaTien);
+            imgYeuThich = itemView.findViewById(R.id.imgYeuThich);
 //            tvMoTa = itemView.findViewById(R.id.card_nb_follower);
         }
     }

@@ -13,12 +13,16 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.fashion.activities.HoodieActivity;
 import com.example.fashion.activities.NewArrivalsActivity;
 import com.example.fashion.activities.OuterwearsActivity;
+import com.example.fashion.activities.ThongBaoActivity;
 import com.example.fashion.activities.TopsActivity;
 import com.example.fashion.fragment.GioHangFragment;
 import com.example.fashion.fragment.HomeFragment;
@@ -36,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     AnimatedBottomBar animatedBottomBar;
     FragmentManager fragmentManager;
+    ImageView imgNotification;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         setToolbar();
         initViews(savedInstanceState);
         initComponentsNavHeader();
+        notification();
     }
     private void setToolbar() {
         toolbar = findViewById(R.id.toolbar);
@@ -153,4 +159,44 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
+    public void notification(){
+        imgNotification = findViewById(R.id.imgThongBao);
+        imgNotification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ThongBaoActivity.class));
+            }
+        });
+    }
+//    //Inflate the menu
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu_bottom, menu);
+//        return true;
+//    }
+//
+//
+//
+//    //Handling Action Bar button click
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle item selection
+//        switch (item.getItemId()) {
+//            //Back button
+//            case android.R.id.home:
+//                //If this activity started from other activity
+//                finish();
+//
+//            /*If you wish to open new activity and close this one
+//            startNewActivity();
+//            */
+//                return true;
+//            case R.id.action_addfav:
+//                //addfav (heart icon) was clicked, Insert your after click code here.
+//                return true;
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+//    }
 }

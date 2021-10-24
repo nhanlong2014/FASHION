@@ -15,6 +15,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         >
         <ImageView
+            android:id="@+id/imgBack"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_arrow_back"/>
@@ -28,127 +29,23 @@
             android:fontFamily="@font/roboto_regular"
             android:text="Địa chỉ"/>
 
+        <ImageView
+            android:layout_gravity="end"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_add"/>
+
+
     </androidx.appcompat.widget.Toolbar>
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_below="@+id/toolbar"
-        android:text="Tên người nhận"
-        android:layout_marginLeft="22dp"
-        android:fontFamily="@font/roboto_regular"
-        android:textSize="16dp"
-        android:textColor="@color/colorPrimary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <EditText
-        android:id="@+id/edtTenNguoiNhan"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginRight="22dp"
-            android:layout_marginTop="5dp"
-        android:layout_marginBottom="12dp"
-        android:background="#F6F5F5"
-        android:drawablePadding="10dp"
-        android:imeOptions="actionSearch"
-        />
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_below="@+id/toolbar"
-        android:text="Số điện thoại"
-        android:layout_marginLeft="22dp"
-        android:fontFamily="@font/roboto_regular"
-        android:textSize="16dp"
-        android:textColor="@color/colorPrimary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"/>
 
-    <EditText
-        android:id="@+id/edtSDT"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvDiaChi"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginBottom="12dp"
-        android:layout_marginRight="22dp"
-        android:layout_marginTop="5dp"
-        android:background="#F6F5F5"
-        android:drawablePadding="10dp"
-        android:imeOptions="actionSearch"
-        />
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_below="@+id/toolbar"
-        android:text="Địa chỉ"
-        android:layout_marginLeft="22dp"
-        android:fontFamily="@font/roboto_regular"
-        android:textSize="16dp"
-        android:textColor="@color/colorPrimary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <EditText
-        android:id="@+id/edtDiaChi"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginBottom="12dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginRight="22dp"
-        android:layout_marginTop="5dp"
-        android:background="#F6F5F5"
-        android:drawablePadding="10dp"
-        android:imeOptions="actionSearch"
-        />
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_below="@+id/toolbar"
-        android:text="Ghi chú"
-        android:layout_marginLeft="22dp"
-        android:fontFamily="@font/roboto_regular"
-        android:textSize="16dp"
-        android:textColor="@color/colorPrimary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <EditText
-        android:id="@+id/edtGhiChu"
-        android:layout_width="match_parent"
-        android:layout_marginBottom="12dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginRight="22dp"
-        android:layout_marginTop="5dp"
-        android:background="#F6F5F5"
-        android:drawablePadding="10dp"
-        android:imeOptions="actionSearch"
-        />
-
-    <CheckBox
-        android:fontFamily="@font/roboto_regular"
-        android:layout_marginLeft="22dp"
-        android:layout_marginTop="12dp"
-        android:textColor="@color/colorPrimary"
-        android:text="Địa chỉ này làm mặc định"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnDiaChi"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="30dp"
-            android:background="@drawable/button_shape"
-            android:backgroundTint="@color/colorPrimary"
-            android:elevation="20dp"
-            android:fontFamily="@font/roboto_regular"
-            android:foregroundGravity="center_vertical"
-            android:text="Tiếp tục"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"/>
     </LinearLayout>

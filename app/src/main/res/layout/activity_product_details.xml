@@ -7,33 +7,25 @@
 
     tools:context=".activities.ProductDetailsActivity">
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ToolbarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_scrollFlags="scroll|enterAlways|snap"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_arrow_back" />
 
         <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/edtTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:drawablePadding="10dp"
-            android:fontFamily="@font/roboto_regular"
-            android:text="Chi tiết sản phẩm"
-            android:textColor="@color/colorPrimary"
+            android:textSize="14dp"
+            android:text="Tìm kiếm sản phẩm"
             android:textColorHint="@color/colorPrimary"
-            android:textSize="20dp" />
+            />
+
 
     </androidx.appcompat.widget.Toolbar>
     <LinearLayout
@@ -42,28 +34,34 @@
         android:layout_below="@+id/toolbar"
         android:orientation="vertical">
 
-        <com.smarteist.autoimageslider.SliderView
-            android:id="@+id/image_slider"
-            android:layout_width="250dp"
-            android:layout_height="180dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="20dp"
-            app:sliderAnimationDuration="600"
-            app:sliderAutoCycleDirection="back_and_forth"
-            app:sliderAutoCycleEnabled="true"
-            app:sliderIndicatorAnimationDuration="200"
-            app:sliderIndicatorGravity="center_horizontal|bottom"
-            app:sliderIndicatorMargin="15dp"
+<!--        <com.smarteist.autoimageslider.SliderView-->
+<!--            android:id="@+id/image_slider"-->
+<!--            android:layout_width="250dp"-->
+<!--            android:layout_height="180dp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_margin="20dp"-->
+<!--            app:sliderAnimationDuration="600"-->
+<!--            app:sliderAutoCycleDirection="back_and_forth"-->
+<!--            app:sliderAutoCycleEnabled="true"-->
+<!--            app:sliderIndicatorAnimationDuration="200"-->
+<!--            app:sliderIndicatorGravity="center_horizontal|bottom"-->
+<!--            app:sliderIndicatorMargin="15dp"-->
 
-            app:sliderIndicatorOrientation="horizontal"
-            app:sliderIndicatorPadding="3dp"
-            app:sliderIndicatorRadius="2dp"
-            app:sliderIndicatorSelectedColor="@color/colorPrimary"
-            app:sliderIndicatorUnselectedColor="#FFF"
-            app:sliderScrollTimeInSec="2"
-            app:sliderStartAutoCycle="true" />
+<!--            app:sliderIndicatorOrientation="horizontal"-->
+<!--            app:sliderIndicatorPadding="3dp"-->
+<!--            app:sliderIndicatorRadius="2dp"-->
+<!--            app:sliderIndicatorSelectedColor="@color/colorPrimary"-->
+<!--            app:sliderIndicatorUnselectedColor="#FFF"-->
+<!--            app:sliderScrollTimeInSec="2"-->
+<!--            app:sliderStartAutoCycle="true" />-->
+        <ImageView
+            android:id="@+id/imgHinhChiTiet"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="250dp"
+            android:layout_height="180dp"/>
 
         <TextView
+            android:id="@+id/tvTenChiTiet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -73,6 +71,7 @@
             android:textSize="20dp" />
 
         <TextView
+            android:id="@+id/tvGiaChiTiet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -103,9 +102,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="53dp">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnsizes"
-                    android:layout_width="40dp"
+                <CheckBox
+                    android:id="@+id/ckbS"
+                    android:textSize="20dp"
+
+                    android:layout_width="60dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="26dp"
                     android:layout_marginTop="8dp"
@@ -116,44 +117,47 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnsizem"
-                    android:layout_width="40dp"
+                <CheckBox
+                    android:id="@+id/ckbM"
+                    android:textSize="20dp"
+                    android:layout_width="60dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="20dp"
                     android:background="@drawable/size_shape"
                     android:fontFamily="@font/roboto_regular"
                     android:text="M"
-                    app:layout_constraintBottom_toBottomOf="@+id/btnsizes"
-                    app:layout_constraintStart_toEndOf="@+id/btnsizes"
-                    app:layout_constraintTop_toTopOf="@+id/btnsizes"
+                    app:layout_constraintBottom_toBottomOf="@+id/ckbS"
+                    app:layout_constraintStart_toEndOf="@+id/ckbS"
+                    app:layout_constraintTop_toTopOf="@+id/ckbS"
                     app:layout_constraintVertical_bias="0.0" />
 
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnsizel"
-                    android:layout_width="40dp"
+                <CheckBox
+                    android:id="@+id/ckbL"
+                    android:textSize="20dp"
+                    android:layout_width="60dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="20dp"
                     android:background="@drawable/size_shape"
                     android:fontFamily="@font/roboto_regular"
                     android:text="L"
-                    app:layout_constraintBottom_toBottomOf="@+id/btnsizem"
-                    app:layout_constraintStart_toEndOf="@+id/btnsizem"
-                    app:layout_constraintTop_toTopOf="@+id/btnsizem"
+                    app:layout_constraintBottom_toBottomOf="@+id/ckbM"
+                    app:layout_constraintStart_toEndOf="@+id/ckbM"
+                    app:layout_constraintTop_toTopOf="@+id/ckbM"
                     app:layout_constraintVertical_bias="0.0" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnsizexl"
-                    android:layout_width="40dp"
+                <CheckBox
+                    android:id="@+id/ckbXL"
+                    android:textSize="20dp"
+                    android:layout_width="60dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="20dp"
                     android:background="@drawable/size_shape"
                     android:fontFamily="@font/roboto_regular"
                     android:text="XL"
-                    app:layout_constraintBottom_toBottomOf="@+id/btnsizel"
-                    app:layout_constraintStart_toEndOf="@+id/btnsizel"
-                    app:layout_constraintTop_toTopOf="@+id/btnsizel" />
+                    app:layout_constraintBottom_toBottomOf="@+id/ckbL"
+                    app:layout_constraintStart_toEndOf="@+id/ckbL"
+                    app:layout_constraintTop_toTopOf="@+id/ckbL" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -176,7 +180,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/product_detail"
+                    android:id="@+id/tvChiTiet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
@@ -186,35 +190,20 @@
                     android:textSize="16dp" />
             </LinearLayout>
 
-            <LinearLayout
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddToCart"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                android:gravity="center_horizontal"
-                android:weightSum="3">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="100dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/button_shape"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Add to Card"
-                    android:textColor="@color/colorPrimary"/>
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="100dp"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/button_shape"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Buy Now"
-                    android:textColor="@color/white" />
-            </LinearLayout>
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="30dp"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/colorPrimary"
+                android:elevation="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:foregroundGravity="center_vertical"
+                android:text="Thêm vào giỏ hàng"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

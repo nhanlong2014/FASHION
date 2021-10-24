@@ -4,10 +4,10 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class Products {
-    private String tenSanPham,moTa;
+    private String tenSanPham,moTa,kichThuoc;
     private Double giaTien;
     private int soLuong;
-    private int maSanPham,maHinhAnh, maKichThuoc, maTheLoai;
+    private int maSanPham,maHinhAnh, maTheLoai;
 
     public String getTenSanPham() {
         return tenSanPham;
@@ -57,12 +57,12 @@ public class Products {
         this.maHinhAnh = maHinhAnh;
     }
 
-    public int getMaKichThuoc() {
-        return maKichThuoc;
+    public String getKichThuoc() {
+        return kichThuoc;
     }
 
-    public void setMaKichThuoc(int maKichThuoc) {
-        this.maKichThuoc = maKichThuoc;
+    public void setMaKichThuoc(String maKichThuoc) {
+        this.kichThuoc = maKichThuoc;
     }
 
     public int getMaTheLoai() {
@@ -73,14 +73,14 @@ public class Products {
         this.maTheLoai = maTheLoai;
     }
 
-    public Products(String tenSanPham, String moTa, Double giaTien, int soLuong, int maSanPham, int maHinhAnh, int maKichThuoc, int maTheLoai) {
+    public Products(String tenSanPham, String moTa, Double giaTien, int soLuong, int maSanPham, int maHinhAnh, String kichThuoc, int maTheLoai) {
         this.tenSanPham = tenSanPham;
         this.moTa = moTa;
         this.giaTien = giaTien;
         this.soLuong = soLuong;
         this.maSanPham = maSanPham;
         this.maHinhAnh = maHinhAnh;
-        this.maKichThuoc = maKichThuoc;
+        this.kichThuoc = kichThuoc;
         this.maTheLoai = maTheLoai;
     }
 

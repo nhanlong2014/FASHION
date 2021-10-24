@@ -15,12 +15,12 @@ import com.example.fashion.R;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dia_chi);
-        btn = findViewById(R.id.btnDiaChi);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(DiaChiActivity.this,ThanhToanActivity.class));
-            }
-        });
+//        btn = findViewById(R.id.btnDiaChi);
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(DiaChiActivity.this,ThanhToanActivity.class));
+//            }
+//        });
     }
 }

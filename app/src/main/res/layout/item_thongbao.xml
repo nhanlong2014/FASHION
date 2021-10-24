@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingLeft="10dp"
+    android:elevation="10dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/button_shape"
+    android:paddingRight="10dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tvTitleThongBao"
+        android:layout_width="wrap_content"
+        android:textSize="16dp"
+        android:textColor="@color/colorPrimary"
+        android:padding="8dp"
+        android:layout_height="wrap_content"
+        android:text="SALE UP TO 50%"/>
+    <TextView
+        android:layout_marginTop="4dp"
+        android:id="@+id/tvDetails"
+        android:layout_below="@+id/tvTitleThongBao"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp"
+        android:padding="8dp"
+
+        android:layout_height="wrap_content"
+        android:text="SALE UP TO 50%"/>
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:textSize="13dp"
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+
+        android:layout_below="@+id/tvDetails"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:text="SALE UP TO 50%"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
