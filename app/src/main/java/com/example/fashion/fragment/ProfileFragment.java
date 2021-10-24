@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +21,10 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
 import com.example.fashion.R;
+import com.example.fashion.activities.DiaChiCuaToiActivity;
+import com.example.fashion.activities.DonHangCuaToiActivity;
+import com.example.fashion.activities.SanPhamYeuThichActivity;
+import com.example.fashion.activities.ThanhToanActivity;
 import com.example.fashion.activities.authencation.DangKyActivity;
 import com.example.fashion.activities.authencation.DangNhapActivity;
 import com.example.fashion.activities.authencation.QuenMatKhauActivity;
@@ -30,9 +35,7 @@ import com.example.fashion.api.RetrofitBuilder;
 import com.example.fashion.api.SharedPrefManager;
 import com.example.fashion.model.User;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+
 
 
 public class ProfileFragment extends Fragment {
@@ -47,7 +50,8 @@ public class ProfileFragment extends Fragment {
     EditText edtEmail,edtPassword;
     AppCompatButton btnDangXuat;
     SharedPrefManager sharedPrefManager;
-
+    RelativeLayout rltDonHang,rltYeuThich,rltDiaChi;
+    TextView tvDonHang,tvYeuThich,tvDiaChi;
 
 
     private static String BASE_URL = "http://10.0.2.2:8081/views/";
@@ -58,6 +62,27 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile2, container, false);
         textView = view.findViewById(R.id.username);
+        tvDonHang= view.findViewById(R.id.tvDonHang);
+        tvYeuThich = view.findViewById(R.id.tvYeuThich);
+        tvDiaChi= view.findViewById(R.id.tvDiaChi);
+        tvDonHang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), DonHangCuaToiActivity.class));
+            }
+        });
+        tvYeuThich.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), SanPhamYeuThichActivity.class));
+            }
+        });
+        tvDiaChi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), DiaChiCuaToiActivity.class));
+            }
+        });
 //        textView.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {

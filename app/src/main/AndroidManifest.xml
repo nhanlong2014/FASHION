@@ -2,9 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fashion">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,40 +14,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FASHION"
         android:usesCleartextTraffic="true">
-    <activity android:name=".activities.authencation.DangNhapActivity">
-
-        </activity>
+        <activity android:name=".activities.DonHangCuaToiActivity"></activity>
+        <activity android:name=".activities.DiaChiCuaToiActivity" />
+        <activity android:name=".activities.AddDiaChiActivity" />
+        <activity android:name=".activities.authencation.DangNhapActivity" />
         <activity
             android:name=".activities.ThongBaoActivity"
             android:exported="true" />
         <activity
             android:name=".activities.WelcomeActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activities.SanPhamYeuThichActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activities.authencation.DoiMatKhauActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activities.authencation.QuenMatKhauActivity"
             android:exported="true" />
         <activity
             android:name=".activities.authencation.DangKyActivity"
-            android:exported="true">
-
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".activities.OrderThanhCongActivity"
             android:exported="true" />
@@ -73,7 +62,13 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

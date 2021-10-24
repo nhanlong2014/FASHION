@@ -15,6 +15,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         >
         <ImageView
+            android:id="@+id/imgBack"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_arrow_back"/>
@@ -104,7 +105,7 @@
             android:layout_alignParentBottom="true"
             android:layout_margin="30dp"
             android:background="@drawable/button_shape"
-            android:backgroundTint="@color/colorPrimary"
+            android:backgroundTint="#3FB2FD"
             android:elevation="20dp"
             android:fontFamily="@font/roboto_regular"
             android:foregroundGravity="center_vertical"

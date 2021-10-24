@@ -6,6 +6,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.fashion.R;
@@ -13,11 +14,19 @@ import com.example.fashion.R;
 public class ThanhToanActivity extends AppCompatActivity {
     AppCompatButton btn;
     TextView tvThemDiaChi;
+    ImageView imgBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thanh_toan);
         tvThemDiaChi = findViewById(R.id.tvThemDiaChi);
+        imgBack = findViewById(R.id.imgBack);
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 //        btn = findViewById(R.id.btnTha  btn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {

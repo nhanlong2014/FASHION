@@ -11,10 +11,21 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        app:titleTextColor="@color/colorPrimary"
-        app:title="SẢN PHẨM YÊU THÍCH">
-
-
+        app:titleTextColor="@color/colorPrimary">
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_arrow_back"/>
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:drawablePadding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Sản phẩm yêu thích"/>
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
