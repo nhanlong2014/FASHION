@@ -36,9 +36,12 @@ public class SharedPrefManager {
 
     public User getUser(){
         sharedPreferences=context.getSharedPreferences(SHARED_PREF_NAME,Context.MODE_PRIVATE);
-        return new User(sharedPreferences.getInt("id",-1),
-                sharedPreferences.getString("username",null),
-                sharedPreferences.getString("email",null));
+        return new User(
+                sharedPreferences.getString("fullname",null),
+                sharedPreferences.getString("email1",null),
+        sharedPreferences.getString("hash_passwrod",null),
+        sharedPreferences.getInt("sdt",0));
+
     }
 
 

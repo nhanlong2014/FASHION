@@ -10,17 +10,17 @@ public class AccessTokenManager {
 
     private static AccessTokenManager instance = null;
 
-    private AccessTokenManager(SharedPreferences _prefs){
-        this.prefs = _prefs;
-        this.editor = prefs.edit();
+    public AccessTokenManager(SharedPreferences prefs, SharedPreferences.Editor editor) {
+        this.prefs = prefs;
+        this.editor = editor;
     }
 
-    public static synchronized AccessTokenManager getInstance(SharedPreferences _prefs){
-        if(instance == null){
-            instance = new AccessTokenManager(_prefs);
-        }
-        return instance;
-    }
+//    public static synchronized AccessTokenManager getInstance(SharedPreferences _prefs){
+//        if(instance == null){
+//            instance = new AccessTokenManager(_prefs);
+//        }
+//        return instance;
+//    }
 
     public void saveToken(AccessToken token){
         //lưu dưới dạng key values

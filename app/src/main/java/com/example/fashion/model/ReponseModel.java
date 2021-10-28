@@ -2,32 +2,12 @@ package com.example.fashion.model;
 
 public class ReponseModel {
 
-    User user;
-    String error,message;
-    Boolean status;
+    private String message;
+    private Boolean status;
 
-
-    public ReponseModel(User user, String error, String message) {
-        this.user = user;
-        this.error = error;
+    public ReponseModel(String message, Boolean status) {
         this.message = message;
-    }
-
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public String getError() {
-        return error;
-    }
-
-    public void setError(String error) {
-        this.error = error;
+        this.status = status;
     }
 
     public String getMessage() {
@@ -36,5 +16,13 @@ public class ReponseModel {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
     }
 }

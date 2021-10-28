@@ -17,7 +17,9 @@
         <activity android:name=".activities.DonHangCuaToiActivity"></activity>
         <activity android:name=".activities.DiaChiCuaToiActivity" />
         <activity android:name=".activities.AddDiaChiActivity" />
-        <activity android:name=".activities.authencation.DangNhapActivity" />
+        <activity android:name=".activities.authencation.DangNhapActivity">
+
+        </activity>
         <activity
             android:name=".activities.ThongBaoActivity"
             android:exported="true" />
@@ -35,7 +37,13 @@
             android:exported="true" />
         <activity
             android:name=".activities.authencation.DangKyActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activities.OrderThanhCongActivity"
             android:exported="true" />
@@ -63,11 +71,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

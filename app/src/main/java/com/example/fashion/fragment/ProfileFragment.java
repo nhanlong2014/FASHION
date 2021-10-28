@@ -30,8 +30,6 @@ import com.example.fashion.activities.authencation.DangNhapActivity;
 import com.example.fashion.activities.authencation.QuenMatKhauActivity;
 import com.example.fashion.api.AccessToken;
 import com.example.fashion.api.AccessTokenManager;
-import com.example.fashion.api.IRetrofitService;
-import com.example.fashion.api.RetrofitBuilder;
 import com.example.fashion.api.SharedPrefManager;
 import com.example.fashion.model.User;
 
