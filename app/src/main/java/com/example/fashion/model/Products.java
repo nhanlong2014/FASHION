@@ -1,99 +1,104 @@
 package com.example.fashion.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Collections;
 import java.util.Comparator;
 
 public class Products {
-    private String tenSanPham,moTa,kichThuoc;
-    private Double giaTien;
-    private int soLuong;
-    private int maSanPham,maHinhAnh, maTheLoai;
+    @SerializedName("product_name")
+    private String product_name;
 
-    public String getTenSanPham() {
-        return tenSanPham;
+    @SerializedName("description")
+    private String description;
+
+    @SerializedName("price")
+    private Double price;
+
+    @SerializedName("quantity")
+    private int quantity;
+
+    @SerializedName("id_product")
+    private int id_product;
+
+    @SerializedName("image_url_product")
+    private String image_url_product;
+
+    @SerializedName("category_id")
+    private int category_id;
+
+
+    public Products() {
     }
 
-    public void setTenSanPham(String tenSanPham) {
-        this.tenSanPham = tenSanPham;
+    public String getProduct_name() {
+        return product_name;
     }
 
-    public String getMoTa() {
-        return moTa;
+    public void setProduct_name(String product_name) {
+        this.product_name = product_name;
     }
 
-    public void setMoTa(String moTa) {
-        this.moTa = moTa;
+    public String getDescription() {
+        return description;
     }
 
-    public Double getGiaTien() {
-        return giaTien;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public void setGiaTien(Double giaTien) {
-        this.giaTien = giaTien;
+    public Double getPrice() {
+        return price;
     }
 
-    public int getSoLuong() {
-        return soLuong;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
-    public void setSoLuong(int soLuong) {
-        this.soLuong = soLuong;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public int getMaSanPham() {
-        return maSanPham;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
-    public void setMaSanPham(int maSanPham) {
-        this.maSanPham = maSanPham;
+    public int getId_product() {
+        return id_product;
     }
 
-    public int getMaHinhAnh() {
-        return maHinhAnh;
+    public void setId_product(int id_product) {
+        this.id_product = id_product;
     }
 
-    public void setMaHinhAnh(int maHinhAnh) {
-        this.maHinhAnh = maHinhAnh;
+    public String getImage_url_product() {
+        return image_url_product;
     }
 
-    public String getKichThuoc() {
-        return kichThuoc;
+    public void setImage_url_product(String image_url_product) {
+        this.image_url_product = image_url_product;
     }
 
-    public void setMaKichThuoc(String maKichThuoc) {
-        this.kichThuoc = maKichThuoc;
+    public int getCategory_id() {
+        return category_id;
     }
 
-    public int getMaTheLoai() {
-        return maTheLoai;
+    public void setCategory_id(int category_id) {
+        this.category_id = category_id;
     }
 
-    public void setMaTheLoai(int maTheLoai) {
-        this.maTheLoai = maTheLoai;
-    }
 
-    public Products(String tenSanPham, String moTa, Double giaTien, int soLuong, int maSanPham, int maHinhAnh, String kichThuoc, int maTheLoai) {
-        this.tenSanPham = tenSanPham;
-        this.moTa = moTa;
-        this.giaTien = giaTien;
-        this.soLuong = soLuong;
-        this.maSanPham = maSanPham;
-        this.maHinhAnh = maHinhAnh;
-        this.kichThuoc = kichThuoc;
-        this.maTheLoai = maTheLoai;
-    }
 
     public static Comparator<Products> productsAZComparator = new Comparator<Products>() {
         @Override
         public int compare(Products o1, Products o2) {
-            return o1.getTenSanPham().compareTo(o2.getTenSanPham());
+            return o1.getProduct_name().compareTo(o2.getProduct_name());
         }
     };
     public static Comparator<Products> productsPriceComparator = new Comparator<Products>() {
         @Override
         public int compare(Products c1, Products c2) {
-            return Double.compare(c1.getGiaTien(),c2.getGiaTien());
+            return Double.compare(c1.getPrice(),c2.getPrice());
         }
     };
 

@@ -52,7 +52,7 @@ public class ProfileFragment extends Fragment {
     TextView tvDonHang,tvYeuThich,tvDiaChi;
 
 
-    private static String BASE_URL = "http://10.0.2.2:8081/views/";
+//    private static String BASE_URL = "http://10.0.2.2:8081/views/";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

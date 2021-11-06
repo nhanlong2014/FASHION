@@ -1,36 +1,47 @@
 package com.example.fashion.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
+
+import com.bumptech.glide.Glide;
 import com.example.fashion.R;
+import com.example.fashion.model.Images;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 
-public class SlideImageAdapter extends SliderViewAdapter<SlideImageAdapter.ViewHolder> {
-    int[] images;
+import java.util.List;
 
-    public SlideImageAdapter(int[] images) {
-        this.images = images;
+public class SlideImageAdapter extends RecyclerView.Adapter<SlideImageAdapter.ViewHolder> {
+    private List<Images> list;
+    Context context;
+
+    public SlideImageAdapter(List<Images> list, Context context) {
+        this.list = list;
+        this.context = context;
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent) {
+    public SlideImageAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_slideimage,parent,false);
         return new ViewHolder(view);    }
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
-        viewHolder.imageView.setImageResource(images[position]);
+        Glide.with(context).load(list.get(position).getImage_url()).into(viewHolder.imageView);
     }
 
     @Override
-    public int getCount() {
-        return images.length;
+    public int getItemCount() {
+        return list.size();
     }
-    public class ViewHolder extends  SliderViewAdapter.ViewHolder{
+    public class ViewHolder extends  RecyclerView.ViewHolder{
 
         ImageView imageView;
 

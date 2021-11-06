@@ -63,7 +63,7 @@ public class TopsActivity extends AppCompatActivity {
     private void filter(String toString) {
         ArrayList<Products> filterList = new ArrayList<>();
         for(Products item: list){
-            if(item.getTenSanPham().toLowerCase().contains(toString.toLowerCase())){
+            if(item.getProduct_name().toLowerCase().contains(toString.toLowerCase())){
                 filterList.add(item);
             }
         }
@@ -73,19 +73,19 @@ public class TopsActivity extends AppCompatActivity {
     //recycview san pham
     private void setRecycelview(List<Products> list){
         rcv = findViewById(R.id.rcvTops);
-        list.add(new Products("Vaaans Old School","aaaaa",
-                2.3,1,1,R.drawable.drew,"S",1));
-        list.add(new Products("Abbbns Old School","aaaaa",
-                1.800000,1,1,R.drawable.drew,"M",2));
-        list.add(new Products("Bcccns Old School","aaaaa",
-                4.800000,1,1,R.drawable.drew,"S",3));
-        list.add(new Products("Vddddns Old School","aaaaa",
-                1.600000,1,1,R.drawable.drew,"M",4));
-        list.add(new Products("Deeeens Old School","aaaaa",
-                1.300000,1,1,R.drawable.drew,"S",5));
-        rcv.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
-        adapter = new SanPhamAdapter(getApplicationContext(), list);
-        rcv.setAdapter(adapter);
+//        list.add(new Products("Vaaans Old School","aaaaa",
+//                2.3,1,1,R.drawable.drew,"S",1));
+//        list.add(new Products("Abbbns Old School","aaaaa",
+//                1.800000,1,1,R.drawable.drew,"M",2));
+//        list.add(new Products("Bcccns Old School","aaaaa",
+//                4.800000,1,1,R.drawable.drew,"S",3));
+//        list.add(new Products("Vddddns Old School","aaaaa",
+//                1.600000,1,1,R.drawable.drew,"M",4));
+//        list.add(new Products("Deeeens Old School","aaaaa",
+//                1.300000,1,1,R.drawable.drew,"S",5));
+//        rcv.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
+//        adapter = new SanPhamAdapter(getApplicationContext(), list);
+//        rcv.setAdapter(adapter);
     }
 
     //toolbar

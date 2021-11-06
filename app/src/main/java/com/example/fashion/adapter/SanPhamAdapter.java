@@ -41,9 +41,9 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull SanPhamAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        holder.tvTenSP.setText(list.get(position).getTenSanPham());
-        Glide.with(Context).load(list.get(position).getMaHinhAnh()).into(holder.imgProduct);
-        holder.tvGiaTien.setText(list.get(position).getGiaTien()+"đ");
+        holder.tvTenSP.setText(list.get(position).getProduct_name());
+        Glide.with(Context).load(list.get(position).getImage_url_product()).into(holder.imgProduct);
+        holder.tvGiaTien.setText(list.get(position).getPrice()+"đ");
         holder.imgYeuThich.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,10 +54,10 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Context, ProductDetailsActivity.class);
-                i.putExtra("tenSanPham",list.get(position).getTenSanPham());
-                i.putExtra("moTa",list.get(position).getMoTa());
-                i.putExtra("maHinhAnh",String.valueOf(list.get(position).getMaHinhAnh()));
-                i.putExtra("giaTien",String.valueOf(list.get(position).getGiaTien()));
+                i.putExtra("product_name", list.get(position).getProduct_name());
+                i.putExtra("price", String.valueOf(list.get(position).getPrice()));
+                i.putExtra("description", list.get(position).getDescription());
+                i.putExtra("product_id", String.valueOf(list.get(position).getId_product()));
 //                i.putExtra("soLuong",String.valueOf(list.get(position).getSoLuong()));
 //                i.putExtra("maSanPham",String.valueOf(list.get(position).getMaSanPham()));
 //                i.putExtra("maHinhAnh",String.valueOf(list.get(position).getMaHinhAnh()));

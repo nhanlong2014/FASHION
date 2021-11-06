@@ -1,10 +1,28 @@
 package com.example.fashion.model;
 
-public class User {
-    String fullname,email,password;
-    int sdt,id_user;
+import com.google.gson.annotations.SerializedName;
 
-    public User(String fullname, String email, String password, int sdt) {
+public class User {
+
+    @SerializedName("id_user")
+    private String id_user;
+
+    @SerializedName("fullname")
+    private String fullname;
+
+    @SerializedName("email")
+    private String email;
+
+    @SerializedName("password")
+    private String password;
+
+    @SerializedName("sdt")
+    int sdt;
+
+    public User() {
+    }
+
+    public User(String email, String password,String fullname, int sdt) {
         this.fullname = fullname;
         this.email = email;
         this.password = password;
@@ -12,33 +30,19 @@ public class User {
     }
 
 
-    public int getId_user() {
-        return id_user;
-    }
-
-    public void setId_user(int id_user) {
-        this.id_user = id_user;
-    }
 
     public User( String email, String password) {
         this.email = email;
         this.password = password;
     }
 
-    public User(String fullname, String email, String password, int sdt, int id_user) {
-        this.fullname = fullname;
-        this.email = email;
-        this.password = password;
-        this.sdt = sdt;
-        this.id_user = id_user;
+    public String getId_user() {
+        return id_user;
     }
 
-//    public User(String fullname, String email, String password, int sdt) {
-//        this.fullname = fullname;
-//        this.email = email;
-//        this.password = password;
-//        this.sdt = sdt;
-//    }
+    public void setId_user(String id_user) {
+        this.id_user = id_user;
+    }
 
     public String getFullname() {
         return fullname;
@@ -60,7 +64,7 @@ public class User {
         return password;
     }
 
-    public void setPassword(String hash_password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 

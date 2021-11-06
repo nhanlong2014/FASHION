@@ -12,4 +12,6 @@
     <color name="beige">#FFEDDA</color>
     <color name="orange">#FFB830</color>
     <color name="red">#FF2442</color>
+    <color name="colorActivIndicator">#D81B60</color>
+    <color name="colorInActivIndicator">#1B1819</color>
 </resources>

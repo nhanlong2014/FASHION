@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.fashion">
+    package="com.example.fashion" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -13,11 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FASHION"
-        android:usesCleartextTraffic="true">
-        <activity android:name=".activities.DonHangCuaToiActivity"></activity>
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name=".activities.authencation.Test"
+            android:exported="true" />
+        <activity android:name=".activities.DonHangCuaToiActivity" />
         <activity android:name=".activities.DiaChiCuaToiActivity" />
         <activity android:name=".activities.AddDiaChiActivity" />
-        <activity android:name=".activities.authencation.DangNhapActivity">
+        <activity android:name=".activities.authencation.DangNhapActivity" >
 
         </activity>
         <activity
@@ -25,7 +28,13 @@
             android:exported="true" />
         <activity
             android:name=".activities.WelcomeActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activities.SanPhamYeuThichActivity"
             android:exported="true" />
@@ -34,16 +43,11 @@
             android:exported="true" />
         <activity
             android:name=".activities.authencation.QuenMatKhauActivity"
-            android:exported="true" />
+            android:exported="true" >
+        </activity>
         <activity
             android:name=".activities.authencation.DangKyActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activities.OrderThanhCongActivity"
             android:exported="true" />
@@ -70,7 +74,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
 
         </activity>
     </application>

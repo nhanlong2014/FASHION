@@ -49,6 +49,7 @@
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawableTint="@color/colorPrimary"
         android:elevation="4dp"
+
         android:singleLine="true"
         android:hint="Password"
         android:inputType="textPassword"

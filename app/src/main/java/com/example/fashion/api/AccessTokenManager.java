@@ -1,37 +1,40 @@
 package com.example.fashion.api;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 
-public class AccessTokenManager {
+import com.example.fashion.model.ReponseModel;
 
-    //SharedPreferences là nơi để lưu khi xóa app thì mất hoặc update cũng mất
+public class AccessTokenManager {
     private SharedPreferences prefs;
     private SharedPreferences.Editor editor;
 
-    private static AccessTokenManager instance = null;
+    private static AccessTokenManager INSTANCE = null;
 
-    public AccessTokenManager(SharedPreferences prefs, SharedPreferences.Editor editor) {
+    private AccessTokenManager(SharedPreferences prefs){
         this.prefs = prefs;
-        this.editor = editor;
+        this.editor = prefs.edit();
     }
 
-//    public static synchronized AccessTokenManager getInstance(SharedPreferences _prefs){
-//        if(instance == null){
-//            instance = new AccessTokenManager(_prefs);
-//        }
-//        return instance;
-//    }
-
-    public void saveToken(AccessToken token){
-        //lưu dưới dạng key values
-        editor.putString("ACCESS_TOKEN", token.getAccess_token()).commit();
+    public static synchronized AccessTokenManager getInstance(SharedPreferences prefs){
+        if(INSTANCE == null){
+            INSTANCE = new AccessTokenManager(prefs);
+        }
+        return INSTANCE;
     }
+
+    public void saveToken(ReponseModel token){
+        editor.putString("ACCESS_TOKEN", token.getAccesss_token()).commit();
+    }
+
     public void deleteToken(){
         editor.remove("ACCESS_TOKEN").commit();
     }
 
-    //hàm lấy ra
-    public AccessToken getToken(){
-        return new AccessToken(prefs.getString("ACCESS_TOKEN",null));
+    public ReponseModel getToken(){
+        ReponseModel token = new ReponseModel();
+        token.setAccesss_token(prefs.getString("ACCESS_TOKEN", null));
+        return token;
     }
+
 }

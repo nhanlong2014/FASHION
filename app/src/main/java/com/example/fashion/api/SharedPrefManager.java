@@ -3,6 +3,7 @@ package com.example.fashion.api;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.example.fashion.model.ReponseModel;
 import com.example.fashion.model.User;
 
 
@@ -18,14 +19,9 @@ public class SharedPrefManager {
         this.context = context;
     }
 
-    public void saveUser(User user){
-        sharedPreferences=context.getSharedPreferences(SHARED_PREF_NAME,Context.MODE_PRIVATE);
-        editor=sharedPreferences.edit();
-        editor.putString("fullname",user.getFullname());
-        editor.putString("email",user.getEmail());
-        editor.apply();
-
-
+    public void saveToken(ReponseModel token){
+        //lưu dưới dạng key values
+        editor.putString("ACCESS_TOKEN", token.getAccesss_token()).commit();
     }
 
    public boolean isLoggedIn(){
