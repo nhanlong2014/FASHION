@@ -10,9 +10,28 @@ public class ListResponse {
 
     @SerializedName("images")
     List<Images> imagesList;
+
+    @SerializedName("carts")
+    List<GioHang> cartList;
+
     String error;
 
-    public ListResponse(List<Products> productsList, String error,List<Images> imagesList) {
+    public ListResponse(List<Products> productsList, List<Images> imagesList, List<GioHang> cartList, String error) {
+        this.productsList = productsList;
+        this.imagesList = imagesList;
+        this.cartList = cartList;
+        this.error = error;
+    }
+
+    public List<GioHang> getCartList() {
+        return cartList;
+    }
+
+    public void setCartList(List<GioHang> cartList) {
+        this.cartList = cartList;
+    }
+
+    public ListResponse(List<Products> productsList, String error, List<Images> imagesList) {
         this.productsList = productsList;
         this.error = error;
         this.imagesList = imagesList;

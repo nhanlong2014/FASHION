@@ -80,7 +80,7 @@ public class NewArrivalsActivity extends AppCompatActivity {
         adapter.getFilter(filterList);
     }
 
-    //recycview san pham
+    //recycview san pham/
     public void getProductById() {
         RecyclerView rcv;
         rcv = findViewById(R.id.rcvSanPham);

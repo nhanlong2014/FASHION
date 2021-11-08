@@ -115,14 +115,15 @@
                 </LinearLayout>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
+
         <ImageView
-            android:padding="8dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:src="@drawable/ic_clear"
+            android:id="@+id/imgDelteItemCart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_clear" />
 
         <TextView
             android:id="@+id/tvTongTien"

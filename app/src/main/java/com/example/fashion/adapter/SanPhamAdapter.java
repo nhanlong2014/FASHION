@@ -58,7 +58,7 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
                 i.putExtra("price", String.valueOf(list.get(position).getPrice()));
                 i.putExtra("description", list.get(position).getDescription());
                 i.putExtra("product_id", String.valueOf(list.get(position).getId_product()));
-//                i.putExtra("soLuong",String.valueOf(list.get(position).getSoLuong()));
+                i.putExtra("img_url_product",(list.get(position).getImage_url_product()));
 //                i.putExtra("maSanPham",String.valueOf(list.get(position).getMaSanPham()));
 //                i.putExtra("maHinhAnh",String.valueOf(list.get(position).getMaHinhAnh()));
 //                i.putExtra("maTheLoai",String.valueOf(list.get(position).getMaTheLoai()));

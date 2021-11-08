@@ -4,6 +4,7 @@ package com.example.fashion.api;
 
 
 
+import com.example.fashion.model.GioHang;
 import com.example.fashion.model.Images;
 import com.example.fashion.model.ListResponse;
 import com.example.fashion.model.Products;
@@ -49,4 +50,13 @@ public interface Api {
 
     @POST("api/getallcategory.php")
     Call<ListResponse> getImages(@Body Images images);
+
+    @POST("api/getAllCart.php")
+    Call<ListResponse> getAllCart(@Body GioHang gioHang) ;
+
+    @POST("api/addtocart.php")
+    Call<ReponseModel> addToCart(@Body GioHang gioHang) ;
+
+    @POST("api/deletecart.php")
+    Call<ReponseModel> deleteToCart(@Body GioHang gioHang) ;
 }

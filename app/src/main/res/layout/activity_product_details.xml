@@ -99,6 +99,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -113,62 +114,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="53dp">
 
-                <CheckBox
-                    android:id="@+id/ckbS"
-                    android:textSize="20dp"
-
-                    android:layout_width="60dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/size_shape"
-                    android:fontFamily="@font/roboto_regular"
-                    android:gravity="center"
-                    android:text="S"
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:entries="@array/size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="8dp"
+                    android:popupBackground="@color/colorPrimary"
+                    android:scrollbars="none"
+                    android:spinnerMode="dropdown"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <CheckBox
-                    android:id="@+id/ckbM"
-                    android:textSize="20dp"
-                    android:layout_width="60dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="20dp"
-                    android:background="@drawable/size_shape"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="M"
-                    app:layout_constraintBottom_toBottomOf="@+id/ckbS"
-                    app:layout_constraintStart_toEndOf="@+id/ckbS"
-                    app:layout_constraintTop_toTopOf="@+id/ckbS"
-                    app:layout_constraintVertical_bias="0.0" />
 
-
-                <CheckBox
-                    android:id="@+id/ckbL"
-                    android:textSize="20dp"
-                    android:layout_width="60dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="20dp"
-                    android:background="@drawable/size_shape"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="L"
-                    app:layout_constraintBottom_toBottomOf="@+id/ckbM"
-                    app:layout_constraintStart_toEndOf="@+id/ckbM"
-                    app:layout_constraintTop_toTopOf="@+id/ckbM"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <CheckBox
-                    android:id="@+id/ckbXL"
-                    android:textSize="20dp"
-                    android:layout_width="60dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="20dp"
-                    android:background="@drawable/size_shape"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="XL"
-                    app:layout_constraintBottom_toBottomOf="@+id/ckbL"
-                    app:layout_constraintStart_toEndOf="@+id/ckbL"
-                    app:layout_constraintTop_toTopOf="@+id/ckbL" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
