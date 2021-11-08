@@ -84,10 +84,8 @@ public class GioHangAdapter extends RecyclerView.Adapter<GioHangAdapter.ViewHold
             public void onClick(View v) {
                 int s = Integer.parseInt(String.valueOf(list.get(position).getId_cart()));
 
-                Toast.makeText(Context, "aaaaaaaaaaaaaaa"+ s, Toast.LENGTH_SHORT).show();
                 GioHang gioHang = new GioHang("", "",
                         "", 0.0, s, 0, 0, "");
-                Log.d("log","?????????"+gioHang);
                 Call<ReponseModel> call = RetrofitClient.getApiClient().create(Api.class).deleteToCart(gioHang);
                 call.enqueue(new Callback<ReponseModel>() {
                     @Override
