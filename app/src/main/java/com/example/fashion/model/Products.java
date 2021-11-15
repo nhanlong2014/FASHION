@@ -2,10 +2,11 @@ package com.example.fashion.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class Products {
+public class Products implements Serializable {
     @SerializedName("product_name")
     private String product_name;
 
@@ -13,10 +14,9 @@ public class Products {
     private String description;
 
     @SerializedName("price")
-    private Double price;
+    private int price;
 
-    @SerializedName("quantity")
-    private int quantity;
+
 
     @SerializedName("id_product")
     private int id_product;
@@ -47,21 +47,15 @@ public class Products {
         this.description = description;
     }
 
-    public Double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
 
     public int getId_product() {
         return id_product;

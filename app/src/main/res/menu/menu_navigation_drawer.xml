@@ -6,7 +6,7 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/nav_newarivals"
-            android:title="NEW ARIVALS" />
+            android:title="ÁO KHOÁC DÙ" />
     </group>
 
     <group
@@ -14,7 +14,7 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/nav_tops"
-            android:title="TOPS" />
+            android:title="ÁO THUN" />
     </group>
 
     <group
@@ -22,7 +22,7 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/nav_outerwear"
-            android:title="OUTERWEAR" />
+            android:title="ÁO HOODIES" />
     </group>
 
     <group
@@ -31,7 +31,7 @@
 
         <item
             android:id="@+id/nav_hoodies"
-            android:title="HOODIES" />
+            android:title="ÁO POLO" />
     </group>
 
 

@@ -75,19 +75,7 @@
                     android:layout_toRightOf="@id/imgCart"
                     android:orientation="horizontal">
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btntru"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/size_shape"
-                        android:backgroundTint="#EEF6F8"
-                        android:fontFamily="@font/roboto_regular"
-                        android:gravity="center"
-                        android:text="-"
-                        android:textSize="20dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+
 
                     <TextView
                         android:id="@+id/tvsoluong"
@@ -99,19 +87,7 @@
                         android:text="1"
                         android:textSize="20dp" />
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btncong"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/size_shape"
-                        android:backgroundTint="#EEF6F8"
-                        android:fontFamily="@font/roboto_regular"
-                        android:gravity="center"
-                        android:text="+"
-                        android:textSize="20dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+
                 </LinearLayout>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>

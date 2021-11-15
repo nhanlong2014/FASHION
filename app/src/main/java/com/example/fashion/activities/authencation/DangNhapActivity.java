@@ -4,9 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,7 +15,6 @@ import com.example.fashion.R;
 import com.example.fashion.api.AccessTokenManager;
 import com.example.fashion.api.Api;
 import com.example.fashion.api.RetrofitClient;
-import com.example.fashion.api.SharedPrefManager;
 import com.example.fashion.model.ReponseModel;
 import com.example.fashion.model.User;
 

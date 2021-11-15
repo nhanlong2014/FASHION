@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 public class User {
 
     @SerializedName("id_user")
-    private String id_user;
+    private int id_user;
 
     @SerializedName("fullname")
     private String fullname;
@@ -36,11 +36,11 @@ public class User {
         this.password = password;
     }
 
-    public String getId_user() {
+    public int getId_user() {
         return id_user;
     }
 
-    public void setId_user(String id_user) {
+    public void setId_user(int id_user) {
         this.id_user = id_user;
     }
 

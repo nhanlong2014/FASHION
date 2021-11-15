@@ -14,6 +14,10 @@ public class ListResponse {
     @SerializedName("carts")
     List<GioHang> cartList;
 
+
+    @SerializedName("diaChi")
+    List<DiaChi> diaChiList;
+
     String error;
 
     public ListResponse(List<Products> productsList, List<Images> imagesList, List<GioHang> cartList, String error) {
@@ -22,6 +26,7 @@ public class ListResponse {
         this.cartList = cartList;
         this.error = error;
     }
+
 
     public List<GioHang> getCartList() {
         return cartList;
@@ -38,7 +43,17 @@ public class ListResponse {
 
     }
 
+    public ListResponse(List<DiaChi> diaChiList) {
+        this.diaChiList = diaChiList;
+    }
 
+    public List<DiaChi> getDiaChiList() {
+        return diaChiList;
+    }
+
+    public void setDiaChiList(List<DiaChi> diaChiList) {
+        this.diaChiList = diaChiList;
+    }
 
     public List<Images> getImagesList() {
         return imagesList;

@@ -39,18 +39,19 @@
        android:weightSum="3.7"
        android:background="@color/white"
        android:layout_height="60dp">
+
       <TextView
           android:id="@+id/total"
-          android:layout_gravity="center"
-          android:text="Tổng tiền:  "
-          android:textStyle="bold"
-          android:layout_centerVertical="true"
-          android:textColor="@color/colorPrimary"
-          android:fontFamily="@font/roboto_regular"
-          android:layout_marginLeft="30dp"
-          android:textSize="18dp"
           android:layout_width="wrap_content"
-          android:layout_height="wrap_content"/>
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_gravity="center"
+          android:layout_marginLeft="30dp"
+          android:fontFamily="@font/roboto_regular"
+          android:text="Tổng tiền:  "
+          android:textColor="@color/colorPrimary"
+          android:textSize="18dp"
+          android:textStyle="bold" />
 
       <TextView
           android:id="@+id/tvTongTienTatCa"
@@ -60,7 +61,7 @@
           android:layout_gravity="center"
           android:layout_toRightOf="@+id/total"
           android:fontFamily="@font/roboto_regular"
-          android:text="11111"
+          android:text="0"
           android:textColor="@color/black"
           android:textSize="16dp"
           android:textStyle="bold" />

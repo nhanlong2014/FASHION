@@ -4,7 +4,9 @@ package com.example.fashion.api;
 
 
 
+import com.example.fashion.model.DiaChi;
 import com.example.fashion.model.GioHang;
+import com.example.fashion.model.HoaDon;
 import com.example.fashion.model.Images;
 import com.example.fashion.model.ListResponse;
 import com.example.fashion.model.Products;
@@ -45,8 +47,16 @@ public interface Api {
     @POST("api/resetpassword.php")
     Call<ReponseModel> resetPassword(@Body User user);
 
+
+    //get san pham new arrival
     @POST("api/getallproductid1.php")
     Call<ListResponse> getProductID1() ;
+//    @POST("api/getallproductid1.php")
+//    Call<ListResponse> getProductID1() ;
+//    @POST("api/getallproductid1.php")
+//    Call<ListResponse> getProductID1() ;
+//    @POST("api/getallproductid1.php")
+//    Call<ListResponse> getProductID1() ;
 
     @POST("api/getallcategory.php")
     Call<ListResponse> getImages(@Body Images images);
@@ -59,4 +69,15 @@ public interface Api {
 
     @POST("api/deletecart.php")
     Call<ReponseModel> deleteToCart(@Body GioHang gioHang) ;
+
+
+    //dia chi
+    @POST("api/getAllAddress.php")
+    Call<ListResponse> getAllAddressById(@Body DiaChi DiaChi) ;
+
+    @POST("api/addAddresses.php")
+    Call<ReponseModel> addAddresses(@Body DiaChi diaChi) ;
+
+    @POST("api/order.php")
+    Call<HoaDon> order(@Body HoaDon hoaDon) ;
 }

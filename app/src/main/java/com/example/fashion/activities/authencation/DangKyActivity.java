@@ -3,9 +3,7 @@ package com.example.fashion.activities.authencation;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -13,14 +11,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.fashion.R;
-import com.example.fashion.api.AccessToken;
 import com.example.fashion.api.AccessTokenManager;
 import com.example.fashion.api.Api;
 import com.example.fashion.api.RetrofitClient;
 import com.example.fashion.model.ReponseModel;
 import com.example.fashion.model.User;
-
-import java.util.HashMap;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -96,6 +91,8 @@ public class DangKyActivity extends AppCompatActivity {
 //    }
 ////
     public void registerUser(User user){
+        tokenManager = AccessTokenManager.getInstance(getSharedPreferences("prefs",MODE_PRIVATE));
+
         final ProgressDialog progressDialog = new ProgressDialog(DangKyActivity.this);
         progressDialog.setTitle("Please wait");
         progressDialog.setMessage("Registering...");

@@ -17,11 +17,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.fashion.R;
 import com.example.fashion.adapter.SanPhamAdapter;
+import com.example.fashion.api.AccessTokenManager;
 import com.example.fashion.api.Api;
 import com.example.fashion.api.RetrofitClient;
+import com.example.fashion.model.ListResponse;
 import com.example.fashion.model.Products;
 
 import java.util.ArrayList;
@@ -36,17 +39,17 @@ import retrofit2.Response;
 
 public class NewArrivalsActivity extends AppCompatActivity {
     Toolbar toolbar;
-    SanPhamAdapter adapter;
     EditText edt;
-    List<Products> list = new ArrayList<>();
-    private static final String TAG = "";
 
+    SanPhamAdapter adapter;
+    private List<Products> list = new ArrayList<>();
+    RecyclerView rcv;
+    AccessTokenManager accessTokenManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_arrivals);
         setToolbar();
-
         getProductById();
 
         edt = findViewById(R.id.edtSearch);
@@ -82,33 +85,29 @@ public class NewArrivalsActivity extends AppCompatActivity {
 
     //recycview san pham/
     public void getProductById() {
-        RecyclerView rcv;
-        rcv = findViewById(R.id.rcvSanPham);
-//        Call<List<Products>> call = RetrofitClient.getApiClient().create(Api.class).getProductID1();
-//        call.enqueue(new Callback<List<Products>>() {
-//            @Override
-//            public void onResponse(Call<List<Products>> call, Response<List<Products>> response) {
-//                if (response.isSuccessful()) {
-//                    if (list.size() == 0) {
-//                        list = response.body();
-//                        rcv.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
-//                        adapter = new SanPhamAdapter(getApplicationContext(), list);
-//                        rcv.setAdapter(adapter);
-//                    } else {
-//                        list.clear();
-//                        list.addAll(response.body());
-//                        adapter.notifyDataSetChanged();
-//                    }
-//                } else {
-//                    Log.i("onResponse Error", response.message());
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<List<Products>> call, Throwable t) {
-//
-//            }
-//        });
+        accessTokenManager = AccessTokenManager.getInstance(getApplication().getSharedPreferences("prefs",MODE_PRIVATE));
+        rcv = findViewById(R.id.rcvSanPham1);
+        rcv.setHasFixedSize(true);
+        rcv.setLayoutManager(new GridLayoutManager(getApplication(), 2));
+
+        Call<ListResponse> call = RetrofitClient.getApiClient().create(Api.class).getProductID1();
+        call.enqueue(new Callback<ListResponse>() {
+            @Override
+            public void onResponse(Call<ListResponse> call, Response<ListResponse> response) {
+                if (response.isSuccessful()) {
+                    list = response.body().getProductsList();
+                    rcv.setAdapter(new SanPhamAdapter(getApplication(), list));
+                } else {
+                    Toast.makeText(getApplication(), "Hệ thống gặp lỗi", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ListResponse> call, Throwable t) {
+                Toast.makeText(getApplication(), t.getMessage(), Toast.LENGTH_SHORT).show();
+                Log.d("LOGGGGGGGGGGGGGGGGGG", "" + t.getMessage());
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

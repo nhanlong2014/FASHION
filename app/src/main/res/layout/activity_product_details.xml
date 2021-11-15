@@ -8,7 +8,7 @@
     tools:context=".activities.ProductDetailsActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbarDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ToolbarTheme"
@@ -33,6 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/colorPrimary"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -41,8 +42,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
 
             <androidx.viewpager2.widget.ViewPager2
@@ -70,7 +71,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
         <TextView
             android:id="@+id/tvTenChiTiet"
             android:layout_width="wrap_content"
@@ -87,23 +87,68 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
-            android:textColor="@color/black"
             android:fontFamily="@font/roboto_regular"
             android:text="đ 1.800.00"
-            />
+            android:textColor="@color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
             android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCartSize"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/imgCart"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btntru"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/size_shape"
+                    android:backgroundTint="#EEF6F8"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSoLuong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="0"
+                    android:textSize="20dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btncong"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/size_shape"
+                    android:backgroundTint="#EEF6F8"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/roboto_regular"
                 android:text="Size"
                 android:textColor="@color/colorPrimary"
@@ -116,10 +161,10 @@
 
                 <Spinner
                     android:id="@+id/spinner"
-                    android:entries="@array/size"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:entries="@array/size"
                     android:paddingLeft="8dp"
                     android:popupBackground="@color/colorPrimary"
                     android:scrollbars="none"
@@ -128,14 +173,11 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
 
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
-                android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
                 <TextView

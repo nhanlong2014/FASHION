@@ -15,13 +15,13 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:fontFamily="@font/roboto_regular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NEW ARRIVALS"
-            android:textColor="@color/colorPrimary"
             android:layout_marginLeft="6dp"
-            android:textSize="20dp" />
+            android:fontFamily="@font/roboto_regular"
+            android:text="ÁO KHOÁC DÙ"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp" />
 
         <TextView
             android:fontFamily="@font/roboto_regular"
@@ -34,7 +34,7 @@
             android:drawableRight="@drawable/ic_arrow_right"
             android:text="Xem tất cả"
             android:textColor="@color/colorPrimary"
-            android:textSize="14dp" />
+            android:textSize="12dp" />
 
     </RelativeLayout>
 

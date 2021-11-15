@@ -10,17 +10,17 @@ public class Images {
     private String image_url;
 
 //    @SerializedName("product_id")
-    private String product_id ;
+    private int product_id ;
 
     public int getId_image() {
         return id_image;
     }
 
-    public Images(String product_id) {
+    public Images(int product_id) {
         this.product_id = product_id;
     }
 
-    public Images(int id_image, String image_url, String product_id) {
+    public Images(int id_image, String image_url, int product_id) {
         this.id_image = id_image;
         this.image_url = image_url;
         this.product_id = product_id;
@@ -38,11 +38,11 @@ public class Images {
         this.image_url = image_url;
     }
 
-    public String getProduct_id() {
+    public int getProduct_id() {
         return product_id;
     }
 
-    public void setProduct_id(String product_id) {
+    public void setProduct_id(int product_id) {
         this.product_id = product_id;
     }
 }

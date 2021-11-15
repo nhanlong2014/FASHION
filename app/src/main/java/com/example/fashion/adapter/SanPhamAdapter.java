@@ -20,6 +20,7 @@ import com.example.fashion.R;
 import com.example.fashion.activities.ProductDetailsActivity;
 import com.example.fashion.model.Products;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,28 +42,19 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull SanPhamAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        holder.tvTenSP.setText(list.get(position).getProduct_name());
-        Glide.with(Context).load(list.get(position).getImage_url_product()).into(holder.imgProduct);
-        holder.tvGiaTien.setText(list.get(position).getPrice()+"đ");
-        holder.imgYeuThich.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(Context, "Yêu thích", Toast.LENGTH_SHORT).show();
-            }
-        });
+
+        Products products = list.get(position);
+        holder.tvTenSP.setText(products.getProduct_name());
+        Glide.with(Context).load(products.getImage_url_product()).into(holder.imgProduct);
+        DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
+        holder.tvGiaTien.setText(decimalFormat.format(products.getPrice())+" đ");
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Context, ProductDetailsActivity.class);
-                i.putExtra("product_name", list.get(position).getProduct_name());
-                i.putExtra("price", String.valueOf(list.get(position).getPrice()));
-                i.putExtra("description", list.get(position).getDescription());
-                i.putExtra("product_id", String.valueOf(list.get(position).getId_product()));
-                i.putExtra("img_url_product",(list.get(position).getImage_url_product()));
-//                i.putExtra("maSanPham",String.valueOf(list.get(position).getMaSanPham()));
-//                i.putExtra("maHinhAnh",String.valueOf(list.get(position).getMaHinhAnh()));
-//                i.putExtra("maTheLoai",String.valueOf(list.get(position).getMaTheLoai()));
-
+                i.putExtra("chitiet",products);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 Context.startActivity(i);
             }
         });
@@ -83,7 +75,6 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
             imgProduct = itemView.findViewById(R.id.imgSanPham);
             tvTenSP = itemView.findViewById(R.id.tvTenSP);
             tvGiaTien = itemView.findViewById(R.id.tvGiaTien);
-            imgYeuThich = itemView.findViewById(R.id.imgYeuThich);
 //            tvMoTa = itemView.findViewById(R.id.card_nb_follower);
         }
     }

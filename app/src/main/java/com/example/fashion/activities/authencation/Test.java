@@ -33,7 +33,7 @@ public class Test extends AppCompatActivity {
             public void onResponse(Call<User> call, Response<User> response) {
                 if(response.isSuccessful()){
                     User model = response.body();
-                    textView.setText(model.getId_user());
+                    textView.setText(String.valueOf(model.getSdt()));
 
                 }
                 else{
