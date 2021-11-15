@@ -58,7 +58,7 @@
         android:padding="8dp"
         android:fontFamily="@font/roboto_regular"
         android:textColor="@color/colorPrimary"
-        android:text="TOPS"/>
+        android:text="ÁO HOODIES"/>
 
 
 
@@ -68,7 +68,7 @@
         android:layout_height="wrap_content">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcvTops"
+            android:id="@+id/rcvHoodies"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"

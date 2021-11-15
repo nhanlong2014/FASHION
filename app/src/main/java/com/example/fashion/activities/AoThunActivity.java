@@ -9,35 +9,46 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.fashion.R;
 import com.example.fashion.adapter.SanPhamAdapter;
+import com.example.fashion.api.AccessTokenManager;
+import com.example.fashion.api.Api;
+import com.example.fashion.api.RetrofitClient;
+import com.example.fashion.model.ListResponse;
 import com.example.fashion.model.Products;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Locale;
-import java.util.Objects;
 
-public class TopsActivity extends AppCompatActivity {
-    RecyclerView rcv;
-    SanPhamAdapter adapter;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class AoThunActivity extends AppCompatActivity {
     Toolbar toolbar;
     EditText edt;
-    List<Products> list = new ArrayList<>();
+
+    SanPhamAdapter adapter;
+    private List<Products> list = new ArrayList<>();
+    RecyclerView rcv;
+    AccessTokenManager accessTokenManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tops);
+        setContentView(R.layout.activity_aothun);
 
         setToolbar();
-        setRecycelview(list);
+        getProductById();
 
+        //search
         edt = findViewById(R.id.edtSearch);
         edt.addTextChangedListener(new TextWatcher() {
             @Override
@@ -70,24 +81,33 @@ public class TopsActivity extends AppCompatActivity {
         adapter.getFilter(filterList);
     }
 
-    //recycview san pham
-    private void setRecycelview(List<Products> list){
+    //recycview san pham/
+    public void getProductById() {
+        accessTokenManager = AccessTokenManager.getInstance(getApplication().getSharedPreferences("prefs",MODE_PRIVATE));
         rcv = findViewById(R.id.rcvTops);
-//        list.add(new Products("Vaaans Old School","aaaaa",
-//                2.3,1,1,R.drawable.drew,"S",1));
-//        list.add(new Products("Abbbns Old School","aaaaa",
-//                1.800000,1,1,R.drawable.drew,"M",2));
-//        list.add(new Products("Bcccns Old School","aaaaa",
-//                4.800000,1,1,R.drawable.drew,"S",3));
-//        list.add(new Products("Vddddns Old School","aaaaa",
-//                1.600000,1,1,R.drawable.drew,"M",4));
-//        list.add(new Products("Deeeens Old School","aaaaa",
-//                1.300000,1,1,R.drawable.drew,"S",5));
-//        rcv.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
-//        adapter = new SanPhamAdapter(getApplicationContext(), list);
-//        rcv.setAdapter(adapter);
-    }
+        rcv.setHasFixedSize(true);
+        rcv.setLayoutManager(new GridLayoutManager(getApplication(), 2));
 
+        Call<ListResponse> call = RetrofitClient.getApiClient().create(Api.class).getProductID2();
+        call.enqueue(new Callback<ListResponse>() {
+            @Override
+            public void onResponse(Call<ListResponse> call, Response<ListResponse> response) {
+                if (response.isSuccessful()) {
+                    list = response.body().getProductsList();
+                    adapter = new SanPhamAdapter(getApplicationContext(), list);
+                    rcv.setAdapter(adapter);
+                } else {
+                    Toast.makeText(getApplication(), "Hệ thống gặp lỗi", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ListResponse> call, Throwable t) {
+                Toast.makeText(getApplication(), t.getMessage(), Toast.LENGTH_SHORT).show();
+                Log.d("LOGGGGGGGGGGGGGGGGGG", "" + t.getMessage());
+            }
+        });
+    }
     //toolbar
     private void setToolbar() {
         toolbar = findViewById(R.id.toolbar);

@@ -57,16 +57,16 @@
             android:name=".activities.DiaChiActivity"
             android:exported="true"></activity>
         <activity
-            android:name=".activities.OuterwearsActivity"
+            android:name=".activities.AoHoodieActivity"
             android:exported="true" />
         <activity
-            android:name=".activities.TopsActivity"
+            android:name=".activities.AoThunActivity"
             android:exported="true" />
         <activity
-            android:name=".activities.NewArrivalsActivity"
+            android:name=".activities.AoKhoacDuActivity"
             android:exported="true" />
         <activity
-            android:name=".activities.HoodieActivity"
+            android:name=".activities.AoPoloActivity"
             android:exported="true" />
         <activity
             android:name=".activities.ProductDetailsActivity"

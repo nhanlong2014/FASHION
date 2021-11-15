@@ -51,12 +51,12 @@ public interface Api {
     //get san pham new arrival
     @POST("api/getallproductid1.php")
     Call<ListResponse> getProductID1() ;
-//    @POST("api/getallproductid1.php")
-//    Call<ListResponse> getProductID1() ;
-//    @POST("api/getallproductid1.php")
-//    Call<ListResponse> getProductID1() ;
-//    @POST("api/getallproductid1.php")
-//    Call<ListResponse> getProductID1() ;
+    @POST("api/getallproductid2.php")
+    Call<ListResponse> getProductID2() ;
+    @POST("api/getallproductid3.php")
+    Call<ListResponse> getProductID3() ;
+    @POST("api/getallproductid4.php")
+    Call<ListResponse> getProductID4() ;
 
     @POST("api/getallcategory.php")
     Call<ListResponse> getImages(@Body Images images);

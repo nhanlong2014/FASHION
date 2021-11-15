@@ -13,22 +13,20 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.fashion.activities.HoodieActivity;
-import com.example.fashion.activities.NewArrivalsActivity;
-import com.example.fashion.activities.OuterwearsActivity;
+import com.example.fashion.activities.AoPoloActivity;
+import com.example.fashion.activities.AoKhoacDuActivity;
+import com.example.fashion.activities.AoHoodieActivity;
 import com.example.fashion.activities.ThongBaoActivity;
-import com.example.fashion.activities.TopsActivity;
+import com.example.fashion.activities.AoThunActivity;
 import com.example.fashion.fragment.GioHangFragment;
 import com.example.fashion.fragment.HomeFragment;
 import com.example.fashion.fragment.ProfileFragment;
 
-import com.example.fashion.fragment.TimKiemFragment;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.Objects;
@@ -118,19 +116,19 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
 
                     case R.id.nav_newarivals:
-                        Intent intent1 = new Intent(MainActivity.this, NewArrivalsActivity.class);
+                        Intent intent1 = new Intent(MainActivity.this, AoKhoacDuActivity.class);
                         startActivity(intent1);
                         break;
                     case R.id.nav_tops:
-                        Intent intent2 = new Intent(MainActivity.this, TopsActivity.class);
+                        Intent intent2 = new Intent(MainActivity.this, AoThunActivity.class);
                         startActivity(intent2);
                         break;
                     case R.id.nav_outerwear:
-                        Intent intent3 = new Intent(MainActivity.this, OuterwearsActivity.class);
+                        Intent intent3 = new Intent(MainActivity.this, AoHoodieActivity.class);
                         startActivity(intent3);
                         break;
                     case R.id.nav_hoodies:
-                        Intent intent4 = new Intent(MainActivity.this, HoodieActivity.class);
+                        Intent intent4 = new Intent(MainActivity.this, AoPoloActivity.class);
                         startActivity(intent4);
                         break;
 
